@@ -1,0 +1,946 @@
+[
+  {
+    "id": "h",
+    "name": "Hidrógeno",
+    "symbol": "H",
+    "protons": 1,
+    "neutrons": 0,
+    "electrons": 1
+  },
+  {
+    "id": "he",
+    "name": "Helio",
+    "symbol": "He",
+    "protons": 2,
+    "neutrons": 2,
+    "electrons": 2
+  },
+  {
+    "id": "li",
+    "name": "Litio",
+    "symbol": "Li",
+    "protons": 3,
+    "neutrons": 4,
+    "electrons": 3
+  },
+  {
+    "id": "be",
+    "name": "Berilio",
+    "symbol": "Be",
+    "protons": 4,
+    "neutrons": 5,
+    "electrons": 4
+  },
+  {
+    "id": "b",
+    "name": "Boro",
+    "symbol": "B",
+    "protons": 5,
+    "neutrons": 6,
+    "electrons": 5
+  },
+  {
+    "id": "c",
+    "name": "Carbono",
+    "symbol": "C",
+    "protons": 6,
+    "neutrons": 6,
+    "electrons": 6
+  },
+  {
+    "id": "n",
+    "name": "Nitrógeno",
+    "symbol": "N",
+    "protons": 7,
+    "neutrons": 7,
+    "electrons": 7
+  },
+  {
+    "id": "o",
+    "name": "Oxígeno",
+    "symbol": "O",
+    "protons": 8,
+    "neutrons": 8,
+    "electrons": 8
+  },
+  {
+    "id": "f",
+    "name": "Flúor",
+    "symbol": "F",
+    "protons": 9,
+    "neutrons": 10,
+    "electrons": 9
+  },
+  {
+    "id": "ne",
+    "name": "Neón",
+    "symbol": "Ne",
+    "protons": 10,
+    "neutrons": 10,
+    "electrons": 10
+  },
+  {
+    "id": "na",
+    "name": "Sodio",
+    "symbol": "Na",
+    "protons": 11,
+    "neutrons": 12,
+    "electrons": 11
+  },
+  {
+    "id": "mg",
+    "name": "Magnesio",
+    "symbol": "Mg",
+    "protons": 12,
+    "neutrons": 12,
+    "electrons": 12
+  },
+  {
+    "id": "al",
+    "name": "Aluminio",
+    "symbol": "Al",
+    "protons": 13,
+    "neutrons": 14,
+    "electrons": 13
+  },
+  {
+    "id": "si",
+    "name": "Silicio",
+    "symbol": "Si",
+    "protons": 14,
+    "neutrons": 14,
+    "electrons": 14
+  },
+  {
+    "id": "p",
+    "name": "Fósforo",
+    "symbol": "P",
+    "protons": 15,
+    "neutrons": 16,
+    "electrons": 15
+  },
+  {
+    "id": "s",
+    "name": "Azufre",
+    "symbol": "S",
+    "protons": 16,
+    "neutrons": 16,
+    "electrons": 16
+  },
+  {
+    "id": "cl",
+    "name": "Cloro",
+    "symbol": "Cl",
+    "protons": 17,
+    "neutrons": 18,
+    "electrons": 17
+  },
+  {
+    "id": "ar",
+    "name": "Argón",
+    "symbol": "Ar",
+    "protons": 18,
+    "neutrons": 22,
+    "electrons": 18
+  },
+  {
+    "id": "k",
+    "name": "Potasio",
+    "symbol": "K",
+    "protons": 19,
+    "neutrons": 20,
+    "electrons": 19
+  },
+  {
+    "id": "ca",
+    "name": "Calcio",
+    "symbol": "Ca",
+    "protons": 20,
+    "neutrons": 20,
+    "electrons": 20
+  },
+  {
+    "id": "sc",
+    "name": "Escandio",
+    "symbol": "Sc",
+    "protons": 21,
+    "neutrons": 24,
+    "electrons": 21
+  },
+  {
+    "id": "ti",
+    "name": "Titanio",
+    "symbol": "Ti",
+    "protons": 22,
+    "neutrons": 26,
+    "electrons": 22
+  },
+  {
+    "id": "v",
+    "name": "Vanadio",
+    "symbol": "V",
+    "protons": 23,
+    "neutrons": 28,
+    "electrons": 23
+  },
+  {
+    "id": "cr",
+    "name": "Cromo",
+    "symbol": "Cr",
+    "protons": 24,
+    "neutrons": 28,
+    "electrons": 24
+  },
+  {
+    "id": "mn",
+    "name": "Manganeso",
+    "symbol": "Mn",
+    "protons": 25,
+    "neutrons": 30,
+    "electrons": 25
+  },
+  {
+    "id": "fe",
+    "name": "Hierro",
+    "symbol": "Fe",
+    "protons": 26,
+    "neutrons": 30,
+    "electrons": 26
+  },
+  {
+    "id": "co",
+    "name": "Cobalto",
+    "symbol": "Co",
+    "protons": 27,
+    "neutrons": 32,
+    "electrons": 27
+  },
+  {
+    "id": "ni",
+    "name": "Níquel",
+    "symbol": "Ni",
+    "protons": 28,
+    "neutrons": 30,
+    "electrons": 28
+  },
+  {
+    "id": "cu",
+    "name": "Cobre",
+    "symbol": "Cu",
+    "protons": 29,
+    "neutrons": 35,
+    "electrons": 29
+  },
+  {
+    "id": "zn",
+    "name": "Zinc",
+    "symbol": "Zn",
+    "protons": 30,
+    "neutrons": 35,
+    "electrons": 30
+  },
+  {
+    "id": "ga",
+    "name": "Galio",
+    "symbol": "Ga",
+    "protons": 31,
+    "neutrons": 39,
+    "electrons": 31
+  },
+  {
+    "id": "ge",
+    "name": "Germanio",
+    "symbol": "Ge",
+    "protons": 32,
+    "neutrons": 40,
+    "electrons": 32
+  },
+  {
+    "id": "as",
+    "name": "Arsénico",
+    "symbol": "As",
+    "protons": 33,
+    "neutrons": 42,
+    "electrons": 33
+  },
+  {
+    "id": "se",
+    "name": "Selenio",
+    "symbol": "Se",
+    "protons": 34,
+    "neutrons": 45,
+    "electrons": 34
+  },
+  {
+    "id": "br",
+    "name": "Bromo",
+    "symbol": "Br",
+    "protons": 35,
+    "neutrons": 45,
+    "electrons": 35
+  },
+  {
+    "id": "kr",
+    "name": "Kriptón",
+    "symbol": "Kr",
+    "protons": 36,
+    "neutrons": 48,
+    "electrons": 36
+  },
+  {
+    "id": "rb",
+    "name": "Rubidio",
+    "symbol": "Rb",
+    "protons": 37,
+    "neutrons": 48,
+    "electrons": 37
+  },
+  {
+    "id": "sr",
+    "name": "Estroncio",
+    "symbol": "Sr",
+    "protons": 38,
+    "neutrons": 50,
+    "electrons": 38
+  },
+  {
+    "id": "y",
+    "name": "Itrio",
+    "symbol": "Y",
+    "protons": 39,
+    "neutrons": 50,
+    "electrons": 39
+  },
+  {
+    "id": "zr",
+    "name": "Zirconio",
+    "symbol": "Zr",
+    "protons": 40,
+    "neutrons": 51,
+    "electrons": 40
+  },
+  {
+    "id": "nb",
+    "name": "Niobio",
+    "symbol": "Nb",
+    "protons": 41,
+    "neutrons": 52,
+    "electrons": 41
+  },
+  {
+    "id": "mo",
+    "name": "Molibdeno",
+    "symbol": "Mo",
+    "protons": 42,
+    "neutrons": 54,
+    "electrons": 42
+  },
+  {
+    "id": "tc",
+    "name": "Tecnecio",
+    "symbol": "Tc",
+    "protons": 43,
+    "neutrons": 55,
+    "electrons": 43
+  },
+  {
+    "id": "ru",
+    "name": "Rutenio",
+    "symbol": "Ru",
+    "protons": 44,
+    "neutrons": 57,
+    "electrons": 44
+  },
+  {
+    "id": "rh",
+    "name": "Rodio",
+    "symbol": "Rh",
+    "protons": 45,
+    "neutrons": 58,
+    "electrons": 45
+  },
+  {
+    "id": "pd",
+    "name": "Paladio",
+    "symbol": "Pd",
+    "protons": 46,
+    "neutrons": 60,
+    "electrons": 46
+  },
+  {
+    "id": "ag",
+    "name": "Plata",
+    "symbol": "Ag",
+    "protons": 47,
+    "neutrons": 61,
+    "electrons": 47
+  },
+  {
+    "id": "cd",
+    "name": "Cadmio",
+    "symbol": "Cd",
+    "protons": 48,
+    "neutrons": 64,
+    "electrons": 48
+  },
+  {
+    "id": "in",
+    "name": "Indio",
+    "symbol": "In",
+    "protons": 49,
+    "neutrons": 65,
+    "electrons": 49
+  },
+  {
+    "id": "sn",
+    "name": "Estaño",
+    "symbol": "Sn",
+    "protons": 50,
+    "neutrons": 69,
+    "electrons": 50
+  },
+  {
+    "id": "sb",
+    "name": "Antimonio",
+    "symbol": "Sb",
+    "protons": 51,
+    "neutrons": 71,
+    "electrons": 51
+  },
+  {
+    "id": "te",
+    "name": "Telurio",
+    "symbol": "Te",
+    "protons": 52,
+    "neutrons": 74,
+    "electrons": 52
+  },
+  {
+    "id": "i",
+    "name": "Yodo",
+    "symbol": "I",
+    "protons": 53,
+    "neutrons": 74,
+    "electrons": 53
+  },
+  {
+    "id": "xe",
+    "name": "Xenón",
+    "symbol": "Xe",
+    "protons": 54,
+    "neutrons": 77,
+    "electrons": 54
+  },
+  {
+    "id": "cs",
+    "name": "Cesio",
+    "symbol": "Cs",
+    "protons": 55,
+    "neutrons": 78,
+    "electrons": 55
+  },
+  {
+    "id": "ba",
+    "name": "Bario",
+    "symbol": "Ba",
+    "protons": 56,
+    "neutrons": 81,
+    "electrons": 56
+  },
+  {
+    "id": "la",
+    "name": "Lantano",
+    "symbol": "La",
+    "protons": 57,
+    "neutrons": 82,
+    "electrons": 57
+  },
+  {
+    "id": "ce",
+    "name": "Cerio",
+    "symbol": "Ce",
+    "protons": 58,
+    "neutrons": 83,
+    "electrons": 58
+  },
+  {
+    "id": "pr",
+    "name": "Praseodimio",
+    "symbol": "Pr",
+    "protons": 59,
+    "neutrons": 84,
+    "electrons": 59
+  },
+  {
+    "id": "nd",
+    "name": "Neodimio",
+    "symbol": "Nd",
+    "protons": 60,
+    "neutrons": 84,
+    "electrons": 60
+  },
+  {
+    "id": "pm",
+    "name": "Prometio",
+    "symbol": "Pm",
+    "protons": 61,
+    "neutrons": 84,
+    "electrons": 61
+  },
+  {
+    "id": "sm",
+    "name": "Samario",
+    "symbol": "Sm",
+    "protons": 62,
+    "neutrons": 88,
+    "electrons": 62
+  },
+  {
+    "id": "eu",
+    "name": "Europio",
+    "symbol": "Eu",
+    "protons": 63,
+    "neutrons": 89,
+    "electrons": 63
+  },
+  {
+    "id": "gd",
+    "name": "Gadolinio",
+    "symbol": "Gd",
+    "protons": 64,
+    "neutrons": 89,
+    "electrons": 64
+  },
+  {
+    "id": "tb",
+    "name": "Terbio",
+    "symbol": "Tb",
+    "protons": 65,
+    "neutrons": 90,
+    "electrons": 65
+  },
+  {
+    "id": "dy",
+    "name": "Disprosio",
+    "symbol": "Dy",
+    "protons": 66,
+    "neutrons": 92,
+    "electrons": 66
+  },
+  {
+    "id": "ho",
+    "name": "Holmio",
+    "symbol": "Ho",
+    "protons": 67,
+    "neutrons": 92,
+    "electrons": 67
+  },
+  {
+    "id": "er",
+    "name": "Erbio",
+    "symbol": "Er",
+    "protons": 68,
+    "neutrons": 96,
+    "electrons": 68
+  },
+  {
+    "id": "tm",
+    "name": "Tulio",
+    "symbol": "Tm",
+    "protons": 69,
+    "neutrons": 97,
+    "electrons": 69
+  },
+  {
+    "id": "yb",
+    "name": "Iterbio",
+    "symbol": "Yb",
+    "protons": 70,
+    "neutrons": 100,
+    "electrons": 70
+  },
+  {
+    "id": "lu",
+    "name": "Lutecio",
+    "symbol": "Lu",
+    "protons": 71,
+    "neutrons": 100,
+    "electrons": 71
+  },
+  {
+    "id": "hf",
+    "name": "Hafnio",
+    "symbol": "Hf",
+    "protons": 72,
+    "neutrons": 106,
+    "electrons": 72
+  },
+  {
+    "id": "ta",
+    "name": "Tantalio",
+    "symbol": "Ta",
+    "protons": 73,
+    "neutrons": 107,
+    "electrons": 73
+  },
+  {
+    "id": "w",
+    "name": "Tungsteno",
+    "symbol": "W",
+    "protons": 74,
+    "neutrons": 109,
+    "electrons": 74
+  },
+  {
+    "id": "re",
+    "name": "Renio",
+    "symbol": "Re",
+    "protons": 75,
+    "neutrons": 110,
+    "electrons": 75
+  },
+  {
+    "id": "os",
+    "name": "Osmio",
+    "symbol": "Os",
+    "protons": 76,
+    "neutrons": 114,
+    "electrons": 76
+  },
+  {
+    "id": "ir",
+    "name": "Iridio",
+    "symbol": "Ir",
+    "protons": 77,
+    "neutrons": 115,
+    "electrons": 77
+  },
+  {
+    "id": "pt",
+    "name": "Platino",
+    "symbol": "Pt",
+    "protons": 78,
+    "neutrons": 117,
+    "electrons": 78
+  },
+  {
+    "id": "au",
+    "name": "Oro",
+    "symbol": "Au",
+    "protons": 79,
+    "neutrons": 118,
+    "electrons": 79
+  },
+  {
+    "id": "hg",
+    "name": "Mercurio",
+    "symbol": "Hg",
+    "protons": 80,
+    "neutrons": 121,
+    "electrons": 80
+  },
+  {
+    "id": "tl",
+    "name": "Talio",
+    "symbol": "Tl",
+    "protons": 81,
+    "neutrons": 122,
+    "electrons": 81
+  },
+  {
+    "id": "pb",
+    "name": "Plomo",
+    "symbol": "Pb",
+    "protons": 82,
+    "neutrons": 126,
+    "electrons": 82
+  },
+  {
+    "id": "bi",
+    "name": "Bismuto",
+    "symbol": "Bi",
+    "protons": 83,
+    "neutrons": 126,
+    "electrons": 83
+  },
+  {
+    "id": "po",
+    "name": "Polonio",
+    "symbol": "Po",
+    "protons": 84,
+    "neutrons": 125,
+    "electrons": 84
+  },
+  {
+    "id": "at",
+    "name": "Astato",
+    "symbol": "At",
+    "protons": 85,
+    "neutrons": 125,
+    "electrons": 85
+  },
+  {
+    "id": "rn",
+    "name": "Radón",
+    "symbol": "Rn",
+    "protons": 86,
+    "neutrons": 136,
+    "electrons": 86
+  },
+  {
+    "id": "fr",
+    "name": "Francio",
+    "symbol": "Fr",
+    "protons": 87,
+    "neutrons": 136,
+    "electrons": 87
+  },
+  {
+    "id": "ra",
+    "name": "Radio",
+    "symbol": "Ra",
+    "protons": 88,
+    "neutrons": 138,
+    "electrons": 88
+  },
+  {
+    "id": "ac",
+    "name": "Actinio",
+    "symbol": "Ac",
+    "protons": 89,
+    "neutrons": 138,
+    "electrons": 89
+  },
+  {
+    "id": "th",
+    "name": "Torio",
+    "symbol": "Th",
+    "protons": 90,
+    "neutrons": 144,
+    "electrons": 90
+  },
+  {
+    "id": "pa",
+    "name": "Protactinio",
+    "symbol": "Pa",
+    "protons": 91,
+    "neutrons": 140,
+    "electrons": 91
+  },
+  {
+    "id": "u",
+    "name": "Uranio",
+    "symbol": "U",
+    "protons": 92,
+    "neutrons": 146,
+    "electrons": 92
+  },
+  {
+    "id": "np",
+    "name": "Neptunio",
+    "symbol": "Np",
+    "protons": 93,
+    "neutrons": 144,
+    "electrons": 93
+  },
+  {
+    "id": "pu",
+    "name": "Plutonio",
+    "symbol": "Pu",
+    "protons": 94,
+    "neutrons": 150,
+    "electrons": 94
+  },
+  {
+    "id": "am",
+    "name": "Americio",
+    "symbol": "Am",
+    "protons": 95,
+    "neutrons": 148,
+    "electrons": 95
+  },
+  {
+    "id": "cm",
+    "name": "Curio",
+    "symbol": "Cm",
+    "protons": 96,
+    "neutrons": 152,
+    "electrons": 96
+  },
+  {
+    "id": "bk",
+    "name": "Berkelio",
+    "symbol": "Bk",
+    "protons": 97,
+    "neutrons": 150,
+    "electrons": 97
+  },
+  {
+    "id": "cf",
+    "name": "Californio",
+    "symbol": "Cf",
+    "protons": 98,
+    "neutrons": 153,
+    "electrons": 98
+  },
+  {
+    "id": "es",
+    "name": "Einstenio",
+    "symbol": "Es",
+    "protons": 99,
+    "neutrons": 153,
+    "electrons": 99
+  },
+  {
+    "id": "fm",
+    "name": "Fermio",
+    "symbol": "Fm",
+    "protons": 100,
+    "neutrons": 157,
+    "electrons": 100
+  },
+  {
+    "id": "md",
+    "name": "Mendelevio",
+    "symbol": "Md",
+    "protons": 101,
+    "neutrons": 157,
+    "electrons": 101
+  },
+  {
+    "id": "no",
+    "name": "Nobelio",
+    "symbol": "No",
+    "protons": 102,
+    "neutrons": 157,
+    "electrons": 102
+  },
+  {
+    "id": "lr",
+    "name": "Lawrencio",
+    "symbol": "Lr",
+    "protons": 103,
+    "neutrons": 157,
+    "electrons": 103
+  },
+  {
+    "id": "rf",
+    "name": "Rutherfordio",
+    "symbol": "Rf",
+    "protons": 104,
+    "neutrons": 157,
+    "electrons": 104
+  },
+  {
+    "id": "db",
+    "name": "Dubnio",
+    "symbol": "Db",
+    "protons": 105,
+    "neutrons": 157,
+    "electrons": 105
+  },
+  {
+    "id": "sg",
+    "name": "Seaborgio",
+    "symbol": "Sg",
+    "protons": 106,
+    "neutrons": 157,
+    "electrons": 106
+  },
+  {
+    "id": "bh",
+    "name": "Bohrio",
+    "symbol": "Bh",
+    "protons": 107,
+    "neutrons": 157,
+    "electrons": 107
+  },
+  {
+    "id": "hs",
+    "name": "Hassio",
+    "symbol": "Hs",
+    "protons": 108,
+    "neutrons": 157,
+    "electrons": 108
+  },
+  {
+    "id": "mt",
+    "name": "Meitnerio",
+    "symbol": "Mt",
+    "protons": 109,
+    "neutrons": 157,
+    "electrons": 109
+  },
+  {
+    "id": "ds",
+    "name": "Darmstatio",
+    "symbol": "Ds",
+    "protons": 110,
+    "neutrons": 157,
+    "electrons": 110
+  },
+  {
+    "id": "rg",
+    "name": "Roentgenio",
+    "symbol": "Rg",
+    "protons": 111,
+    "neutrons": 157,
+    "electrons": 111
+  },
+  {
+    "id": "cn",
+    "name": "Copernicio",
+    "symbol": "Cn",
+    "protons": 112,
+    "neutrons": 157,
+    "electrons": 112
+  },
+  {
+    "id": "nh",
+    "name": "Nihonio",
+    "symbol": "Nh",
+    "protons": 113,
+    "neutrons": 157,
+    "electrons": 113
+  },
+  {
+    "id": "fl",
+    "name": "Flerovio",
+    "symbol": "Fl",
+    "protons": 114,
+    "neutrons": 157,
+    "electrons": 114
+  },
+  {
+    "id": "mc",
+    "name": "Moscovio",
+    "symbol": "Mc",
+    "protons": 115,
+    "neutrons": 157,
+    "electrons": 115
+  },
+  {
+    "id": "lv",
+    "name": "Livermorio",
+    "symbol": "Lv",
+    "protons": 116,
+    "neutrons": 157,
+    "electrons": 116
+  },
+  {
+    "id": "ts",
+    "name": "Teneso",
+    "symbol": "Ts",
+    "protons": 117,
+    "neutrons": 157,
+    "electrons": 117
+  },
+  {
+    "id": "og",
+    "name": "Oganesón",
+    "symbol": "Og",
+    "protons": 118,
+    "neutrons": 157,
+    "electrons": 118
+  }
+]

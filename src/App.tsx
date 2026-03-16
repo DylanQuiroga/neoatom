@@ -1,34 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import Scene from './components/3d/scene';
+import OverlayHUD from './components/ui/overlayhud';
+import Atom2D from './components/ui/Atom2D';
+import { useAtomStore, ParticleType } from './store/useAtomStore';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const addParticle = useAtomStore((state) => state.addParticle);
+  const viewMode = useAtomStore((state) => state.viewMode);
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault(); // Necesario para permitir el drop
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const type = e.dataTransfer.getData('particleType') as ParticleType;
+    if (type === 'proton' || type === 'neutron' || type === 'electron') {
+      addParticle(type);
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div 
+      className="w-screen h-screen bg-gray-950 relative overflow-hidden flex"
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+    >
+      {/* Capa 2D: Interfaz de Usuario y HUD principal */}
+      <OverlayHUD />
+
+      {/* Condicional de Vista */}
+      {viewMode === '2d' ? (
+        <Atom2D />
+      ) : (
+        <div className="absolute inset-0 w-full h-full">
+            <Canvas camera={{ position: [0, 0, 12] }}>
+              <color attach="background" args={['#030712']} />
+              <OrbitControls 
+                enablePan={false}  // Deshabilitar pan evitará que el left-click (mapeado a Pan) haga algo
+                enableZoom={true} 
+                enableRotate={true}
+                /* Hacemos que RIGHT click haga ROTATE (orbitar) y dejamos LEFT mapeado a Pan (desactivado) */
+                mouseButtons={{
+                  LEFT: 2, // 2 = pan, como está deshabilitado no hace nada
+                  MIDDLE: 1, // 1 = zoom
+                  RIGHT: 0 // 0 = rotate
+                }}
+              />
+              <Scene />
+            </Canvas>
+        </div>
+      )}
+    </div>
   )
 }
 

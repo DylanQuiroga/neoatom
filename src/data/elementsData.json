@@ -1,0 +1,992 @@
+{
+  "1": {
+    "atomicNumber": 1,
+    "symbol": "H",
+    "name": "Hidrógeno",
+    "category": "No metal",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "2": {
+    "atomicNumber": 2,
+    "symbol": "He",
+    "name": "Helio",
+    "category": "Gas noble",
+    "hazards": []
+  },
+  "3": {
+    "atomicNumber": 3,
+    "symbol": "Li",
+    "name": "Litio",
+    "category": "Metal alcalino",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "4": {
+    "atomicNumber": 4,
+    "symbol": "Be",
+    "name": "Berilio",
+    "category": "Metal alcalinotérreo",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "5": {
+    "atomicNumber": 5,
+    "symbol": "B",
+    "name": "Boro",
+    "category": "Metaloide",
+    "hazards": []
+  },
+  "6": {
+    "atomicNumber": 6,
+    "symbol": "C",
+    "name": "Carbono",
+    "category": "No metal",
+    "hazards": []
+  },
+  "7": {
+    "atomicNumber": 7,
+    "symbol": "N",
+    "name": "Nitrógeno",
+    "category": "No metal",
+    "hazards": []
+  },
+  "8": {
+    "atomicNumber": 8,
+    "symbol": "O",
+    "name": "Oxígeno",
+    "category": "No metal",
+    "hazards": [
+      "Corrosivo"
+    ]
+  },
+  "9": {
+    "atomicNumber": 9,
+    "symbol": "F",
+    "name": "Flúor",
+    "category": "Halógeno",
+    "hazards": [
+      "Corrosivo",
+      "Tóxico"
+    ]
+  },
+  "10": {
+    "atomicNumber": 10,
+    "symbol": "Ne",
+    "name": "Neón",
+    "category": "Gas noble",
+    "hazards": []
+  },
+  "11": {
+    "atomicNumber": 11,
+    "symbol": "Na",
+    "name": "Sodio",
+    "category": "Metal alcalino",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "12": {
+    "atomicNumber": 12,
+    "symbol": "Mg",
+    "name": "Magnesio",
+    "category": "Metal alcalinotérreo",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "13": {
+    "atomicNumber": 13,
+    "symbol": "Al",
+    "name": "Aluminio",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "14": {
+    "atomicNumber": 14,
+    "symbol": "Si",
+    "name": "Silicio",
+    "category": "Metaloide",
+    "hazards": []
+  },
+  "15": {
+    "atomicNumber": 15,
+    "symbol": "P",
+    "name": "Fósforo",
+    "category": "No metal",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "16": {
+    "atomicNumber": 16,
+    "symbol": "S",
+    "name": "Azufre",
+    "category": "No metal",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "17": {
+    "atomicNumber": 17,
+    "symbol": "Cl",
+    "name": "Cloro",
+    "category": "Halógeno",
+    "hazards": [
+      "Corrosivo",
+      "Tóxico"
+    ]
+  },
+  "18": {
+    "atomicNumber": 18,
+    "symbol": "Ar",
+    "name": "Argón",
+    "category": "Gas noble",
+    "hazards": []
+  },
+  "19": {
+    "atomicNumber": 19,
+    "symbol": "K",
+    "name": "Potasio",
+    "category": "Metal alcalino",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "20": {
+    "atomicNumber": 20,
+    "symbol": "Ca",
+    "name": "Calcio",
+    "category": "Metal alcalinotérreo",
+    "hazards": []
+  },
+  "21": {
+    "atomicNumber": 21,
+    "symbol": "Sc",
+    "name": "Escandio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "22": {
+    "atomicNumber": 22,
+    "symbol": "Ti",
+    "name": "Titanio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "23": {
+    "atomicNumber": 23,
+    "symbol": "V",
+    "name": "Vanadio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "24": {
+    "atomicNumber": 24,
+    "symbol": "Cr",
+    "name": "Cromo",
+    "category": "Metal de transición",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "25": {
+    "atomicNumber": 25,
+    "symbol": "Mn",
+    "name": "Manganeso",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "26": {
+    "atomicNumber": 26,
+    "symbol": "Fe",
+    "name": "Hierro",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "27": {
+    "atomicNumber": 27,
+    "symbol": "Co",
+    "name": "Cobalto",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "28": {
+    "atomicNumber": 28,
+    "symbol": "Ni",
+    "name": "Níquel",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "29": {
+    "atomicNumber": 29,
+    "symbol": "Cu",
+    "name": "Cobre",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "30": {
+    "atomicNumber": 30,
+    "symbol": "Zn",
+    "name": "Zinc",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "31": {
+    "atomicNumber": 31,
+    "symbol": "Ga",
+    "name": "Galio",
+    "category": "Metal del bloque p",
+    "hazards": []
+  },
+  "32": {
+    "atomicNumber": 32,
+    "symbol": "Ge",
+    "name": "Germanio",
+    "category": "Metaloide",
+    "hazards": []
+  },
+  "33": {
+    "atomicNumber": 33,
+    "symbol": "As",
+    "name": "Arsénico",
+    "category": "Metaloide",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "34": {
+    "atomicNumber": 34,
+    "symbol": "Se",
+    "name": "Selenio",
+    "category": "No metal",
+    "hazards": []
+  },
+  "35": {
+    "atomicNumber": 35,
+    "symbol": "Br",
+    "name": "Bromo",
+    "category": "Halógeno",
+    "hazards": [
+      "Corrosivo",
+      "Tóxico"
+    ]
+  },
+  "36": {
+    "atomicNumber": 36,
+    "symbol": "Kr",
+    "name": "Kriptón",
+    "category": "Gas noble",
+    "hazards": []
+  },
+  "37": {
+    "atomicNumber": 37,
+    "symbol": "Rb",
+    "name": "Rubidio",
+    "category": "Metal alcalino",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "38": {
+    "atomicNumber": 38,
+    "symbol": "Sr",
+    "name": "Estroncio",
+    "category": "Metal alcalinotérreo",
+    "hazards": []
+  },
+  "39": {
+    "atomicNumber": 39,
+    "symbol": "Y",
+    "name": "Itrio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "40": {
+    "atomicNumber": 40,
+    "symbol": "Zr",
+    "name": "Zirconio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "41": {
+    "atomicNumber": 41,
+    "symbol": "Nb",
+    "name": "Niobio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "42": {
+    "atomicNumber": 42,
+    "symbol": "Mo",
+    "name": "Molibdeno",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "43": {
+    "atomicNumber": 43,
+    "symbol": "Tc",
+    "name": "Tecnecio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "44": {
+    "atomicNumber": 44,
+    "symbol": "Ru",
+    "name": "Rutenio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "45": {
+    "atomicNumber": 45,
+    "symbol": "Rh",
+    "name": "Rodio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "46": {
+    "atomicNumber": 46,
+    "symbol": "Pd",
+    "name": "Paladio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "47": {
+    "atomicNumber": 47,
+    "symbol": "Ag",
+    "name": "Plata",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "48": {
+    "atomicNumber": 48,
+    "symbol": "Cd",
+    "name": "Cadmio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "49": {
+    "atomicNumber": 49,
+    "symbol": "In",
+    "name": "Indio",
+    "category": "Metal del bloque p",
+    "hazards": []
+  },
+  "50": {
+    "atomicNumber": 50,
+    "symbol": "Sn",
+    "name": "Estaño",
+    "category": "Metal del bloque p",
+    "hazards": []
+  },
+  "51": {
+    "atomicNumber": 51,
+    "symbol": "Sb",
+    "name": "Antimonio",
+    "category": "Metaloide",
+    "hazards": []
+  },
+  "52": {
+    "atomicNumber": 52,
+    "symbol": "Te",
+    "name": "Telurio",
+    "category": "Metaloide",
+    "hazards": []
+  },
+  "53": {
+    "atomicNumber": 53,
+    "symbol": "I",
+    "name": "Yodo",
+    "category": "Halógeno",
+    "hazards": [
+      "Corrosivo",
+      "Tóxico"
+    ]
+  },
+  "54": {
+    "atomicNumber": 54,
+    "symbol": "Xe",
+    "name": "Xenón",
+    "category": "Gas noble",
+    "hazards": []
+  },
+  "55": {
+    "atomicNumber": 55,
+    "symbol": "Cs",
+    "name": "Cesio",
+    "category": "Metal alcalino",
+    "hazards": [
+      "Inflamable"
+    ]
+  },
+  "56": {
+    "atomicNumber": 56,
+    "symbol": "Ba",
+    "name": "Bario",
+    "category": "Metal alcalinotérreo",
+    "hazards": []
+  },
+  "57": {
+    "atomicNumber": 57,
+    "symbol": "La",
+    "name": "Lantano",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "58": {
+    "atomicNumber": 58,
+    "symbol": "Ce",
+    "name": "Cerio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "59": {
+    "atomicNumber": 59,
+    "symbol": "Pr",
+    "name": "Praseodimio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "60": {
+    "atomicNumber": 60,
+    "symbol": "Nd",
+    "name": "Neodimio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "61": {
+    "atomicNumber": 61,
+    "symbol": "Pm",
+    "name": "Prometio",
+    "category": "Lantánido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "62": {
+    "atomicNumber": 62,
+    "symbol": "Sm",
+    "name": "Samario",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "63": {
+    "atomicNumber": 63,
+    "symbol": "Eu",
+    "name": "Europio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "64": {
+    "atomicNumber": 64,
+    "symbol": "Gd",
+    "name": "Gadolinio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "65": {
+    "atomicNumber": 65,
+    "symbol": "Tb",
+    "name": "Terbio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "66": {
+    "atomicNumber": 66,
+    "symbol": "Dy",
+    "name": "Disprosio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "67": {
+    "atomicNumber": 67,
+    "symbol": "Ho",
+    "name": "Holmio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "68": {
+    "atomicNumber": 68,
+    "symbol": "Er",
+    "name": "Erbio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "69": {
+    "atomicNumber": 69,
+    "symbol": "Tm",
+    "name": "Tulio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "70": {
+    "atomicNumber": 70,
+    "symbol": "Yb",
+    "name": "Iterbio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "71": {
+    "atomicNumber": 71,
+    "symbol": "Lu",
+    "name": "Lutecio",
+    "category": "Lantánido",
+    "hazards": []
+  },
+  "72": {
+    "atomicNumber": 72,
+    "symbol": "Hf",
+    "name": "Hafnio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "73": {
+    "atomicNumber": 73,
+    "symbol": "Ta",
+    "name": "Tantalio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "74": {
+    "atomicNumber": 74,
+    "symbol": "W",
+    "name": "Tungsteno",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "75": {
+    "atomicNumber": 75,
+    "symbol": "Re",
+    "name": "Renio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "76": {
+    "atomicNumber": 76,
+    "symbol": "Os",
+    "name": "Osmio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "77": {
+    "atomicNumber": 77,
+    "symbol": "Ir",
+    "name": "Iridio",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "78": {
+    "atomicNumber": 78,
+    "symbol": "Pt",
+    "name": "Platino",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "79": {
+    "atomicNumber": 79,
+    "symbol": "Au",
+    "name": "Oro",
+    "category": "Metal de transición",
+    "hazards": []
+  },
+  "80": {
+    "atomicNumber": 80,
+    "symbol": "Hg",
+    "name": "Mercurio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "81": {
+    "atomicNumber": 81,
+    "symbol": "Tl",
+    "name": "Talio",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "82": {
+    "atomicNumber": 82,
+    "symbol": "Pb",
+    "name": "Plomo",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "83": {
+    "atomicNumber": 83,
+    "symbol": "Bi",
+    "name": "Bismuto",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Tóxico"
+    ]
+  },
+  "84": {
+    "atomicNumber": 84,
+    "symbol": "Po",
+    "name": "Polonio",
+    "category": "Metaloide",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "85": {
+    "atomicNumber": 85,
+    "symbol": "At",
+    "name": "Astato",
+    "category": "Halógeno",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "86": {
+    "atomicNumber": 86,
+    "symbol": "Rn",
+    "name": "Radón",
+    "category": "Gas noble",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "87": {
+    "atomicNumber": 87,
+    "symbol": "Fr",
+    "name": "Francio",
+    "category": "Metal alcalino",
+    "hazards": [
+      "Radioactivo",
+      "Inflamable",
+      "Tóxico"
+    ]
+  },
+  "88": {
+    "atomicNumber": 88,
+    "symbol": "Ra",
+    "name": "Radio",
+    "category": "Metal alcalinotérreo",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "89": {
+    "atomicNumber": 89,
+    "symbol": "Ac",
+    "name": "Actinio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "90": {
+    "atomicNumber": 90,
+    "symbol": "Th",
+    "name": "Torio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "91": {
+    "atomicNumber": 91,
+    "symbol": "Pa",
+    "name": "Protactinio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "92": {
+    "atomicNumber": 92,
+    "symbol": "U",
+    "name": "Uranio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "93": {
+    "atomicNumber": 93,
+    "symbol": "Np",
+    "name": "Neptunio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "94": {
+    "atomicNumber": 94,
+    "symbol": "Pu",
+    "name": "Plutonio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "95": {
+    "atomicNumber": 95,
+    "symbol": "Am",
+    "name": "Americio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "96": {
+    "atomicNumber": 96,
+    "symbol": "Cm",
+    "name": "Curio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "97": {
+    "atomicNumber": 97,
+    "symbol": "Bk",
+    "name": "Berkelio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "98": {
+    "atomicNumber": 98,
+    "symbol": "Cf",
+    "name": "Californio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "99": {
+    "atomicNumber": 99,
+    "symbol": "Es",
+    "name": "Einstenio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "100": {
+    "atomicNumber": 100,
+    "symbol": "Fm",
+    "name": "Fermio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "101": {
+    "atomicNumber": 101,
+    "symbol": "Md",
+    "name": "Mendelevio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "102": {
+    "atomicNumber": 102,
+    "symbol": "No",
+    "name": "Nobelio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "103": {
+    "atomicNumber": 103,
+    "symbol": "Lr",
+    "name": "Lawrencio",
+    "category": "Actínido",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "104": {
+    "atomicNumber": 104,
+    "symbol": "Rf",
+    "name": "Rutherfordio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "105": {
+    "atomicNumber": 105,
+    "symbol": "Db",
+    "name": "Dubnio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "106": {
+    "atomicNumber": 106,
+    "symbol": "Sg",
+    "name": "Seaborgio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "107": {
+    "atomicNumber": 107,
+    "symbol": "Bh",
+    "name": "Bohrio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "108": {
+    "atomicNumber": 108,
+    "symbol": "Hs",
+    "name": "Hassio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "109": {
+    "atomicNumber": 109,
+    "symbol": "Mt",
+    "name": "Meitnerio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "110": {
+    "atomicNumber": 110,
+    "symbol": "Ds",
+    "name": "Darmstatio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "111": {
+    "atomicNumber": 111,
+    "symbol": "Rg",
+    "name": "Roentgenio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "112": {
+    "atomicNumber": 112,
+    "symbol": "Cn",
+    "name": "Copernicio",
+    "category": "Metal de transición",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "113": {
+    "atomicNumber": 113,
+    "symbol": "Nh",
+    "name": "Nihonio",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "114": {
+    "atomicNumber": 114,
+    "symbol": "Fl",
+    "name": "Flerovio",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "115": {
+    "atomicNumber": 115,
+    "symbol": "Mc",
+    "name": "Moscovio",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "116": {
+    "atomicNumber": 116,
+    "symbol": "Lv",
+    "name": "Livermorio",
+    "category": "Metal del bloque p",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "117": {
+    "atomicNumber": 117,
+    "symbol": "Ts",
+    "name": "Teneso",
+    "category": "Halógeno",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  },
+  "118": {
+    "atomicNumber": 118,
+    "symbol": "Og",
+    "name": "Oganesón",
+    "category": "Gas noble",
+    "hazards": [
+      "Radioactivo",
+      "Tóxico"
+    ]
+  }
+}
