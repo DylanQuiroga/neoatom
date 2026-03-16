@@ -51,7 +51,7 @@ const OverlayHUD = () => {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout>;
     if (showUiHint) {
       timeout = setTimeout(() => setShowUiHint(false), 3000);
     }
@@ -59,7 +59,7 @@ const OverlayHUD = () => {
   }, [showUiHint]);
 
   useEffect(() => {
-    let tooltipTimeout: NodeJS.Timeout;
+    let tooltipTimeout: ReturnType<typeof setTimeout>;
     if (activeTooltip) {
       tooltipTimeout = setTimeout(() => setActiveTooltip(null), 2500);
     }
