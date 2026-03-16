@@ -135,6 +135,16 @@ const OverlayHUD = () => {
     );
   }
 
+  const specialParticle = React.useMemo(() => {
+    if (protons === 2 && neutrons === 2 && electrons === 0) return { name: 'Partícula Alfa', category: 'Radiación Ionizante', symbol: 'α' };
+    if (protons === 0 && neutrons === 1 && electrons === 0) return { name: 'Neutrón Libre', category: 'Radiación Neutrónica', symbol: 'n' };
+    if (protons === 0 && neutrons === 0 && electrons === 1) return { name: 'Partícula Beta', category: 'Radiación Beta', symbol: 'β⁻' };
+    if (protons === 1 && neutrons === 0 && electrons === 0) return { name: 'Protón', category: 'Núcleo de Hidrógeno', symbol: 'H⁺' };
+    if (protons === 1 && neutrons === 1 && electrons === 0) return { name: 'Deuterón', category: 'Núcleo de Deuterio', symbol: '²H⁺' };
+    if (protons === 1 && neutrons === 2 && electrons === 0) return { name: 'Tritón', category: 'Núcleo de Tritio', symbol: '³H⁺' };
+    return null;
+  }, [protons, neutrons, electrons]);
+
   return (
     <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-4 pb-12 sm:pb-8 sm:p-8 font-sans animate-in fade-in duration-300">
       {/* Header Info Panel */}
@@ -178,8 +188,8 @@ const OverlayHUD = () => {
               <>
                 <div className="flex items-end gap-2 sm:gap-4 mb-1 sm:mb-4">
                   <div className="text-4xl sm:text-7xl font-light tracking-tighter leading-none">
-                    {element ? element.symbol : '?'}
-                    {netCharge !== 0 && (
+                    {specialParticle ? specialParticle.symbol : (element ? element.symbol : '?')}
+                    {!specialParticle && netCharge !== 0 && (
                       <sup className="text-lg sm:text-2xl font-medium text-blue-300 ml-1">{displayCharge}</sup>
                     )}
                   </div>
@@ -190,10 +200,10 @@ const OverlayHUD = () => {
                 </div>
 
                 <h2 className="text-xl sm:text-2xl font-semibold mb-1">
-                  {protons === 2 && neutrons === 2 && electrons === 0 ? 'Partícula Alfa' : (element ? element.name : 'Vacio')}
+                  {specialParticle ? specialParticle.name : (element ? element.name : (protons === 0 && neutrons === 0 && electrons === 0 ? 'Vacio' : 'Desconocido'))}
                 </h2>
                 <p className="text-xs sm:text-sm text-white/50 mb-2 uppercase tracking-wider font-medium">
-                  {protons === 2 && neutrons === 2 && electrons === 0 ? 'Radiación Ionizante' : (element ? element.category : 'Agrega protones para empezar')}
+                  {specialParticle ? specialParticle.category : (element ? element.category : (protons === 0 && neutrons === 0 && electrons === 0 ? 'Agrega protones para empezar' : 'Isótopos inestables'))}
                 </p>
 
                 {element && (
