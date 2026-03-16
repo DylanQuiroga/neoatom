@@ -1,0 +1,198 @@
+{
+  "protactinium": {
+    "name": "Protactinio",
+    "appearance": "brillo metálico plateado brillante",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El protactinio es un elemento químico con el símbolo Pa y el número atómico 91. Es un metal actínido denso, de color gris plateado, que reacciona fácilmente con el oxígeno, el vapor de agua y los ácidos inorgánicos."
+  },
+  "uranium": {
+    "name": "Uranio",
+    "appearance": "metálico",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El uranio es un elemento químico con el símbolo U y el número atómico 92. Es un metal blanco plateado en la serie de actínidos de la tabla periódica. Un átomo de uranio tiene 92 protones y 92 electrones, de los cuales 6 son electrones de valencia."
+  },
+  "neptunium": {
+    "name": "Neptunio",
+    "appearance": "metálico plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El neptunio es un elemento químico con el símbolo Np y el número atómico 93. Un metal radiactivo actínido, el neptunio es el primer elemento transuránico. Su posición en la tabla periódica justo después del uranio le dio su nombre por el planeta Neptuno."
+  },
+  "plutonium": {
+    "name": "Plutonio",
+    "appearance": "metálico plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El plutonio es un elemento químico radiactivo transuránico con el símbolo Pu y el número atómico 94. Es un metal actínido de apariencia gris plateada que se empaña cuando se expone al aire e incluso forma un recubrimiento opaco cuando se oxida."
+  },
+  "americium": {
+    "name": "Americio",
+    "appearance": "metálico plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El americio es un elemento químico radiactivo transuránico con el símbolo Am y el número atómico 95. Es un miembro de la serie de actínidos, situado en la tabla periódica bajo el elemento lantánido europio, y por analogía recibió su nombre de las Américas."
+  },
+  "curium": {
+    "name": "Curio",
+    "appearance": "metálico plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El curio es un elemento químico transuránico radiactivo de la serie de los actínidos con el símbolo Cm y el número atómico 96. Este elemento fue nombrado después de Marie y Pierre Curie, ambos conocidos por sus investigaciones sobre la radiactividad."
+  },
+  "berkelium": {
+    "name": "Berquelio",
+    "appearance": "metálico plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El berquelio es un elemento químico transuránico radiactivo con el símbolo Bk y el número atómico 97. Es un miembro de la serie de actínidos y elementos transuránicos. Recibió su nombre de la ciudad de Berkeley, California, el lugar de su descubrimiento."
+  },
+  "californium": {
+    "name": "Californio",
+    "appearance": "metálico plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El californio es un elemento radiactivo metálico transuránico con el símbolo Cf y el número atómico 98. El elemento fue sintetizado por primera vez en 1950 en el Laboratorio Nacional Lawrence Berkeley de la Universidad de California."
+  },
+  "einsteinium": {
+    "name": "Einstenio",
+    "appearance": "metálico plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El einstenio es un elemento químico sintético con el símbolo Es y el número atómico 99. Es el séptimo elemento transuránico y un actínido. Fue nombrado en honor a Albert Einstein."
+  },
+  "fermium": {
+    "name": "Fermio",
+    "appearance": "metálico",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El fermio es un elemento químico sintético radiactivo con el símbolo Fm y el número atómico 100. Es un actínido y el elemento transuránico más pesado que se puede producir por bombardeo de neutrones de elementos más ligeros."
+  },
+  "mendelevium": {
+    "name": "Mendelevio",
+    "appearance": "metálico",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El mendelevio es un elemento químico sintético con el símbolo Md y el número atómico 101. Un elemento radiactivo transuránico en la serie de los actínidos, es el primer elemento que actualmente no se puede producir en cantidades macroscópicas por bombardeo de neutrones."
+  },
+  "nobelium": {
+    "name": "Nobelio",
+    "appearance": "metálico",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El nobelio es un elemento químico sintético radiactivo con el símbolo No y el número atómico 102. Recibió su nombre de Alfred Nobel, el inventor de la dinamita y benefactor de la ciencia. Un metal radiactivo, es el décimo elemento transuránico."
+  },
+  "lawrencium": {
+    "name": "Lawrencio",
+    "appearance": "metálico",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El lawrencio es un elemento químico sintético radiactivo con el símbolo Lr y el número atómico 103. Recibió su nombre en honor a Ernest Lawrence, inventor del ciclotrón, un dispositivo que se utilizó para descubrir muchos elementos artificiales."
+  },
+  "rutherfordium": {
+    "name": "Rutherfordio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El rutherfordio es un elemento químico sintético con el símbolo Rf y el número atómico 104. Como elemento sintético, no se encuentra en la naturaleza y solo puede crearse en un laboratorio. Es altamente radiactivo."
+  },
+  "dubnium": {
+    "name": "Dubnio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El dubnio es un elemento químico con el símbolo Db y el número atómico 105. El nombre proviene del lugar de su descubrimiento, Dubna, Rusia. Es un elemento altamente radiactivo cuyos isótopos más estables tienen vidas medias de solo unas pocas horas."
+  },
+  "seaborgium": {
+    "name": "Seaborgio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El seaborgio es un elemento químico sintético con el símbolo Sg y el número atómico 106. Recibió su nombre en honor al químico nuclear estadounidense Glenn T. Seaborg. El seaborgio es un metal radiactivo de corta vida."
+  },
+  "bohrium": {
+    "name": "Bohrio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El bohrio es un elemento químico sintético con el símbolo Bh y el número atómico 107. Es un elemento sintético altamente radiactivo; su isótopo más estable, el bohrio-270, tiene una vida media de aproximadamente 61 segundos."
+  },
+  "hassium": {
+    "name": "Hasio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El hasio es un elemento químico sintético con el símbolo Hs y el número atómico 108. Es altamente radiactivo; sus isótopos más estables tienen vidas medias de unos diez segundos. El hasio fue sintetizado por primera vez en 1984."
+  },
+  "meitnerium": {
+    "name": "Meitnerio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El meitnerio es un elemento químico sintético con el símbolo Mt y el número atómico 109. Es un elemento sintético altamente radiactivo; su isótopo más estable conocido, el meitnerio-278, tiene una vida media de 4,5 segundos."
+  },
+  "darmstadtium": {
+    "name": "Darmstatio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El darmstatio es un elemento químico con el símbolo Ds y el número atómico 110. Es un elemento sintético altamente radiactivo. Fue sintetizado por primera vez en 1994 cerca de la ciudad de Darmstadt, Alemania."
+  },
+  "roentgenium": {
+    "name": "Roentgenio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El roentgenio es un elemento químico con el símbolo Rg y el número atómico 111. Es un elemento sintético extremadamente radiactivo que se puede crear en un laboratorio pero no se encuentra en la naturaleza."
+  },
+  "copernicium": {
+    "name": "Copernicio",
+    "appearance": "metálico",
+    "category": "metal de transición",
+    "phase": "Gas",
+    "summary": "El copernicio es un elemento químico con el símbolo Cn y el número atómico 112. Sus isótopos conocidos son extremadamente radiactivos. El elemento fue nombrado en honor al astrónomo Nicolás Copérnico."
+  },
+  "nihonium": {
+    "name": "Nihonio",
+    "appearance": "metálico",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El nihonio es un elemento químico sintético con el símbolo Nh y el número atómico 113. Es extremadamente radiactivo. Fue descubierto por científicos en el centro de investigación RIKEN en Japón."
+  },
+  "flerovium": {
+    "name": "Flerovio",
+    "appearance": "metálico",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El flerovio es un elemento químico sintético con el símbolo Fl y el número atómico 114. Es un elemento transuránico extremadamente radiactivo. Fue nombrado en honor al Laboratorio Flerov de Reacciones Nucleares."
+  },
+  "moscovium": {
+    "name": "Moscovio",
+    "appearance": "metálico",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El moscovio es un elemento químico sintético radiactivo con el símbolo Mc y el número atómico 115. Fue sintetizado por primera vez en 2003 por un equipo conjunto de científicos rusos y estadounidenses."
+  },
+  "livermorium": {
+    "name": "Livermorio",
+    "appearance": "metálico",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El livermorio es un elemento químico sintético con el símbolo Lv y el número atómico 116. Es un elemento extremadamente radiactivo que solo se ha creado en el laboratorio y no se ha observado en la naturaleza."
+  },
+  "tennessine": {
+    "name": "Teneso",
+    "appearance": "metálico",
+    "category": "no metal",
+    "phase": "Sólido",
+    "summary": "El teneso es un elemento químico sintético con el símbolo Ts y el número atómico 117. Es el segundo elemento más pesado conocido y el penúltimo elemento del séptimo período de la tabla periódica."
+  },
+  "oganesson": {
+    "name": "Oganesón",
+    "appearance": "metálico",
+    "category": "gas noble",
+    "phase": "Sólido",
+    "summary": "El oganesón es un elemento químico radiactivo sintetizado con el símbolo Og y el número atómico 118. Fue sintetizado por primera vez en 2002. Es el elemento más pesado conocido y completa el séptimo período."
+  }
+}

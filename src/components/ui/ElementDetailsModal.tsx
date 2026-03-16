@@ -84,7 +84,9 @@ const ElementDetailsModal: React.FC<ElementDetailsModalProps> = ({ isOpen, onClo
 
             <div className="flex flex-col gap-1 p-4 bg-black/20 rounded-xl border border-white/5 sm:col-span-2">
               <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">Apariencia</span>
-              <span className="text-white/90 text-sm capitalize">{element.appearance || 'Desconocida'}</span>
+              <span className="text-white/90 text-sm">
+                {(element.appearance || 'Desconocida').charAt(0).toUpperCase() + (element.appearance || 'Desconocida').slice(1)}
+              </span>
             </div>
           </div>
 

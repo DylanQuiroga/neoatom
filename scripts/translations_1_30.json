@@ -1,0 +1,212 @@
+{
+  "hydrogen": {
+    "name": "Hidrógeno",
+    "appearance": "gas incoloro",
+    "category": "no metal diatómico",
+    "phase": "Gas",
+    "summary": "El hidrógeno es un elemento químico con el símbolo H y el número atómico 1. Con un peso atómico de 1,00794 u, el hidrógeno es el elemento más ligero de la tabla periódica. Su forma monatómica (H) es la sustancia química más abundante en el universo, constituyendo aproximadamente el 75% de toda la masa bariónica."
+  },
+  "helium": {
+    "name": "Helio",
+    "appearance": "gas incoloro, con un brillo rojo-anaranjado cuando se coloca en un campo eléctrico de alto voltaje",
+    "category": "gas noble",
+    "phase": "Gas",
+    "summary": "El helio es un elemento químico con el símbolo He y el número atómico 2. Es un gas monatómico incoloro, inodoro, insípido, no tóxico e inerte que encabeza el grupo de los gases nobles en la tabla periódica. Sus puntos de ebullición y fusión son los más bajos entre todos los elementos."
+  },
+  "lithium": {
+    "name": "Litio",
+    "appearance": "blanco plateado",
+    "category": "metal alcalino",
+    "phase": "Sólido",
+    "summary": "El litio (del griego: λίθος lithos, 'piedra') es un elemento químico con el símbolo Li y el número atómico 3. Es un metal blando de color blanco plateado que pertenece al grupo de los metales alcalinos. En condiciones estándar, es el metal más ligero y el elemento sólido menos denso."
+  },
+  "beryllium": {
+    "name": "Berilio",
+    "appearance": "metálico blanco grisáceo",
+    "category": "metal alcalinotérreo",
+    "phase": "Sólido",
+    "summary": "El berilio es un elemento químico con el símbolo Be y el número atómico 4. Se crea a través de la nucleosíntesis estelar y es un elemento relativamente raro en el universo. Es un elemento divalente que se presenta de forma natural solo en combinación con otros elementos en los minerales."
+  },
+  "boron": {
+    "name": "Boro",
+    "appearance": "marrón-negro",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El boro es un elemento químico metaloide con el símbolo B y el número atómico 5. Producido enteramente por la espalación de los rayos cósmicos y las supernovas y no por la nucleosíntesis estelar, es un elemento de baja abundancia tanto en el Sistema Solar como en la corteza terrestre."
+  },
+  "carbon": {
+    "name": "Carbono",
+    "appearance": "blanco plateado",
+    "category": "no metal poliatómico",
+    "phase": "Sólido",
+    "summary": "El carbono (del latín: carbo 'carbón') es un elemento químico con el símbolo C y el número atómico 6. Es el primero (fila 2) de seis elementos en la columna (grupo) 14, que tienen en común la composición de su capa exterior de electrones. Es no metálico y tetravalente."
+  },
+  "nitrogen": {
+    "name": "Nitrógeno",
+    "appearance": "gas, líquido o sólido incoloro",
+    "category": "no metal diatómico",
+    "phase": "Gas",
+    "summary": "El nitrógeno es un elemento químico con el símbolo N y el número atómico 7. Es el pnictógeno más ligero y, a temperatura ambiente, es un gas diatómico transparente e inodoro. Es un elemento común en el universo, estimado como el séptimo en abundancia total en la Vía Láctea."
+  },
+  "oxygen": {
+    "name": "Oxígeno",
+    "appearance": "gas incoloro",
+    "category": "no metal diatómico",
+    "phase": "Gas",
+    "summary": "El oxígeno es un elemento químico con el símbolo O y el número atómico 8. Es un miembro del grupo de los calcógenos en la tabla periódica y es un no metal altamente reactivo y un agente oxidante que forma fácilmente compuestos con la mayoría de los elementos."
+  },
+  "fluorine": {
+    "name": "Flúor",
+    "appearance": "gas amarillo pálido",
+    "category": "no metal diatómico",
+    "phase": "Gas",
+    "summary": "El flúor es un elemento químico con el símbolo F y el número atómico 9. Es el halógeno más ligero y existe como un gas diatómico amarillo pálido altamente tóxico en condiciones estándar. Como el elemento más electronegativo, es extremadamente reactivo."
+  },
+  "neon": {
+    "name": "Neón",
+    "appearance": "gas incoloro que presenta un brillo rojo anaranjado en un campo eléctrico de alta tensión",
+    "category": "gas noble",
+    "phase": "Gas",
+    "summary": "El neón es un elemento químico con el símbolo Ne y el número atómico 10. Es un gas monatómico incoloro, inodoro e inerte en condiciones estándar, con aproximadamente dos tercios de la densidad del aire. Fue descubierto en 1898 como uno de los tres componentes inertes raros."
+  },
+  "sodium": {
+    "name": "Sodio",
+    "appearance": "metálico blanco plateado",
+    "category": "metal alcalino",
+    "phase": "Sólido",
+    "summary": "El sodio es un elemento químico con el símbolo Na y el número atómico 11. Es un metal blando, blanco plateado y altamente reactivo. El sodio es un metal alcalino, estando en el grupo 1 de la tabla periódica, ya que tiene un solo electrón en su capa exterior que cede fácilmente."
+  },
+  "magnesium": {
+    "name": "Magnesio",
+    "appearance": "sólido gris brillante",
+    "category": "metal alcalinotérreo",
+    "phase": "Sólido",
+    "summary": "El magnesio es un elemento químico con el símbolo Mg y el número atómico 12. Es un sólido gris brillante que tiene un parecido físico cercano a los otros cinco elementos de la segunda columna (Grupo 2, o metales alcalinotérreos) de la tabla periódica."
+  },
+  "aluminium": {
+    "name": "Aluminio",
+    "appearance": "metálico gris plateado",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El aluminio es un elemento químico de símbolo Al y número atómico 13. Es un metal blanco plateado, blando, no magnético y dúctil. El aluminio es el tercer elemento más abundante y el metal más abundante en la corteza terrestre."
+  },
+  "silicon": {
+    "name": "Silicio",
+    "appearance": "cristalino, reflectante con caras azuladas",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El silicio es un elemento químico con el símbolo Si y el número atómico 14. Es un metaloide tetravalente, más reactivo que el germanio. El silicio es el octavo elemento más abundante en el universo por masa, pero rara vez se presenta como elemento puro en la naturaleza."
+  },
+  "phosphorus": {
+    "name": "Fósforo",
+    "appearance": "incoloro, blanco ceroso, amarillo, escarlata, rojo, violeta, negro",
+    "category": "no metal poliatómico",
+    "phase": "Sólido",
+    "summary": "El fósforo es un elemento químico con el símbolo P y el número atómico 15. Como elemento, el fósforo existe en dos formas principales: fósforo blanco y fósforo rojo, pero debido a su alta reactividad, nunca se encuentra como un elemento libre en la Tierra."
+  },
+  "sulfur": {
+    "name": "Azufre",
+    "appearance": "microcristales sinterizados de color amarillo limón",
+    "category": "no metal poliatómico",
+    "phase": "Sólido",
+    "summary": "El azufre es un elemento químico con el símbolo S y el número atómico 16. Es abundante, multivalente y no metálico. En condiciones estándar, los átomos de azufre forman moléculas octatómicas cíclicas con una fórmula química S8."
+  },
+  "chlorine": {
+    "name": "Cloro",
+    "appearance": "gas amarillo-verde pálido",
+    "category": "no metal diatómico",
+    "phase": "Gas",
+    "summary": "El cloro es un elemento químico con el símbolo Cl y el número atómico 17. El segundo más ligero de los halógenos, aparece entre el flúor y el bromo en la tabla periódica y sus propiedades son en su mayoría intermedias entre ellos. El cloro es un gas amarillo verdoso a temperatura ambiente."
+  },
+  "argon": {
+    "name": "Argón",
+    "appearance": "gas incoloro que presenta un brillo lila/violeta en un campo eléctrico de alta tensión",
+    "category": "gas noble",
+    "phase": "Gas",
+    "summary": "El argón es un elemento químico con el símbolo Ar y el número atómico 18. Está en el grupo 18 de la tabla periódica y es un gas noble. El argón es el tercer gas más abundante en la atmósfera terrestre, con un 0,934%."
+  },
+  "potassium": {
+    "name": "Potasio",
+    "appearance": "gris plateado",
+    "category": "metal alcalino",
+    "phase": "Sólido",
+    "summary": "El potasio es un elemento químico con el símbolo K y el número atómico 19. Fue aislado por primera vez del potasio, la ceniza de las plantas, de donde deriva su nombre. En la tabla periódica, el potasio es uno de los metales alcalinos."
+  },
+  "calcium": {
+    "name": "Calcio",
+    "appearance": "blanco plateado",
+    "category": "metal alcalinotérreo",
+    "phase": "Sólido",
+    "summary": "El calcio es un elemento químico con el símbolo Ca y el número atómico 20. El calcio es un metal alcalinotérreo reactivo que forma una capa de óxido oscuro cuando se expone al aire. Sus propiedades físicas y químicas son más similares a sus homólogos más pesados, el estroncio y el bario."
+  },
+  "scandium": {
+    "name": "Escandio",
+    "appearance": "blanco plateado metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El escandio es un elemento químico con el símbolo Sc y el número atómico 21. Un elemento metálico de transición de bloque d de color blanco plateado, ha sido clasificado históricamente como un elemento de tierras raras."
+  },
+  "titanium": {
+    "name": "Titanio",
+    "appearance": "metal plateado-blanco-grisáceo",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El titanio es un elemento químico con el símbolo Ti y el número atómico 22. Es un metal de transición lustroso con un color plateado, baja densidad y alta resistencia. El titanio es resistente a la corrosión en agua de mar, agua regia y cloro."
+  },
+  "vanadium": {
+    "name": "Vanadio",
+    "appearance": "metal gris azulado-plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El vanadio es un elemento químico con el símbolo V y el número atómico 23. Es un metal de transición blando, gris plateado y dúctil. El metal elemental rara vez se encuentra en la naturaleza, pero una vez aislado artificialmente, la formación de una capa de óxido estabiliza el metal libre contra la oxidación."
+  },
+  "chromium": {
+    "name": "Cromo",
+    "appearance": "metálico plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El cromo es un elemento químico con el símbolo Cr y el número atómico 24. Es el primer elemento del grupo 6. Es un metal gris acero, lustroso, duro y quebradizo que admite un alto pulido, resiste el empañamiento y tiene un alto punto de fusión."
+  },
+  "manganese": {
+    "name": "Manganeso",
+    "appearance": "metálico brillante con un tinte grisáceo",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El manganeso es un elemento químico con el símbolo Mn y el número atómico 25. No se encuentra como elemento libre en la naturaleza; a menudo se encuentra en minerales en combinación con hierro. El manganeso es un metal con importantes usos industriales en aleaciones metálicas, particularmente en aceros inoxidables."
+  },
+  "iron": {
+    "name": "Hierro",
+    "appearance": "metal gris lustroso duro",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El hierro es un elemento químico con el símbolo Fe y el número atómico 26. Es un metal en la primera serie de transición. Es por masa el elemento más común en la Tierra, formando gran parte del núcleo externo e interno de la Tierra."
+  },
+  "cobalt": {
+    "name": "Cobalto",
+    "appearance": "lustroso, metálico y plateado con un tinte dorado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El cobalto es un elemento químico con el símbolo Co y el número atómico 27. Al igual que el níquel, el cobalto se encuentra en la corteza terrestre solo en forma combinada químicamente, salvo pequeños depósitos encontrados en aleaciones de hierro meteórico natural."
+  },
+  "nickel": {
+    "name": "Níquel",
+    "appearance": "metálico blanco plateado lustroso con un tinte dorado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El níquel es un elemento químico con el símbolo Ni y el número atómico 28. Es un metal blanco plateado lustroso con un ligero tinte dorado. El níquel pertenece a los metales de transición y es duro y dúctil."
+  },
+  "copper": {
+    "name": "Cobre",
+    "appearance": "brillo metálico rojo-anaranjado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El cobre es un elemento químico con el símbolo Cu y el número atómico 29. Es un metal blando, maleable y dúctil con una conductividad muy alta de calor y electricidad. Una superficie de cobre puro recién expuesta tiene un color rojo anaranjado."
+  },
+  "zinc": {
+    "name": "Zinc",
+    "appearance": "gris plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El zinc es un elemento químico con el símbolo Zn y el número atómico 30. Es el primer elemento en el grupo 12 de la tabla periódica. En algunos aspectos, el zinc es químicamente similar al magnesio: ambos elementos exhiben solo un estado de oxidación común (+2)."
+  }
+}

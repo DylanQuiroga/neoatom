@@ -1,0 +1,212 @@
+{
+  "gallium": {
+    "name": "Galio",
+    "appearance": "gris metálico azulado",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El galio es un elemento químico con el símbolo Ga y el número atómico 31. El galio elemental no se encuentra en la naturaleza, pero se obtiene fácilmente mediante la fundición. El punto de fusión del galio se utiliza como un punto de referencia de la temperatura."
+  },
+  "germanium": {
+    "name": "Germanio",
+    "appearance": "blanco grisáceo",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El germanio es un elemento químico con el símbolo Ge y el número atómico 32. Es un metaloide lustroso, duro, de color blanco grisáceo en el grupo del carbono, químicamente similar a sus vecinos de grupo, el estaño y el silicio."
+  },
+  "arsenic": {
+    "name": "Arsénico",
+    "appearance": "gris metálico",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El arsénico es un elemento químico con el símbolo As y el número atómico 33. El arsénico aparece en muchos minerales, generalmente en combinación con azufre y metales, pero también como un cristal elemental puro."
+  },
+  "selenium": {
+    "name": "Selenio",
+    "appearance": "alótropos negro, rojo y gris",
+    "category": "no metal poliatómico",
+    "phase": "Sólido",
+    "summary": "El selenio es un elemento químico con el símbolo Se y el número atómico 34. Es un no metal con propiedades intermedias entre los elementos arriba y abajo en la tabla periódica, azufre y teluro. Rara vez se encuentra en estado elemental."
+  },
+  "bromine": {
+    "name": "Bromo",
+    "appearance": "gas metálico de color gris lustroso, violeta",
+    "category": "no metal diatómico",
+    "phase": "Líquido",
+    "summary": "El bromo (del griego: βρῶμος, brōmos, que significa 'hedor') es un elemento químico con el símbolo Br y el número atómico 35. Es el tercer halógeno más ligero y es un líquido rojo-marrón humeante a temperatura ambiente."
+  },
+  "krypton": {
+    "name": "Kriptón",
+    "appearance": "gas incoloro, con un brillo blanquecino en un campo eléctrico elevado",
+    "category": "gas noble",
+    "phase": "Gas",
+    "summary": "El kriptón (del griego: κρυπτός kryptos 'el oculto') es un elemento químico con el símbolo Kr y el número atómico 36. Es un miembro del grupo 18 (gases nobles) de elementos. Un gas noble incoloro, inodoro e insípido."
+  },
+  "rubidium": {
+    "name": "Rubidio",
+    "appearance": "gris blanco",
+    "category": "metal alcalino",
+    "phase": "Sólido",
+    "summary": "El rubidio es un elemento químico con el símbolo Rb y el número atómico 37. El rubidio es un elemento metálico blando, blanco plateado, del grupo de los metales alcalinos, con un peso atómico de 85,4678. El rubidio elemental es altamente reactivo."
+  },
+  "strontium": {
+    "name": "Estroncio",
+    "appearance": "metálico gris, azulado cuando se oxida",
+    "category": "metal alcalinotérreo",
+    "phase": "Sólido",
+    "summary": "El estroncio es un elemento químico con el símbolo Sr y el número atómico 38. Un metal alcalinotérreo, el estroncio es un elemento metálico blando de color blanco plateado o amarillento que es altamente reactivo químicamente."
+  },
+  "yttrium": {
+    "name": "Itrio",
+    "appearance": "metálico gris",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El itrio es un elemento químico con el símbolo Y y el número atómico 39. Es un elemento de transición metálico de color blanco plateado químicamente similar a los lantánidos y a menudo se ha clasificado como un 'elemento de tierras raras'."
+  },
+  "zirconium": {
+    "name": "Circonio",
+    "appearance": "metal plateado-blanco",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El circonio es un elemento químico con el símbolo Zr y el número atómico 40. El nombre de circonio se toma del nombre del mineral circón, la fuente más importante de circonio. Es un metal de transición fuerte y lustroso de color gris-blanco."
+  },
+  "niobium": {
+    "name": "Niobio",
+    "appearance": "metal gris brillante",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El niobio, anteriormente conocido como columbio, es un elemento químico con el símbolo Nb y el número atómico 41. Es un metal de transición blando, gris y cristalino, que se presenta a menudo en el mineral pirocloro."
+  },
+  "molybdenum": {
+    "name": "Molibdeno",
+    "appearance": "metal gris",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El molibdeno es un elemento químico con el símbolo Mo y el número atómico 42. El nombre proviene del neo-latín molybdaenum, del griego antiguo Μόλυβδος molybdos, que significa plomo, ya que sus minerales se confundían con los de plomo."
+  },
+  "technetium": {
+    "name": "Tecnecio",
+    "appearance": "metal blanco plateado brillante",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El tecnecio es un elemento químico con el símbolo Tc y el número atómico 43. Es el elemento de número atómico más bajo sin isótopos estables; cada forma de él es radiactiva. Casi todo el tecnecio se produce sintéticamente."
+  },
+  "ruthenium": {
+    "name": "Rutenio",
+    "appearance": "metal blanco plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El rutenio es un elemento químico con el símbolo Ru y el número atómico 44. Es un metal de transición raro que pertenece al grupo del platino de la tabla periódica. Al igual que los otros metales del grupo del platino, el rutenio es inerte a la mayoría de los productos químicos."
+  },
+  "rhodium": {
+    "name": "Rodio",
+    "appearance": "metal blanco plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El rodio es un elemento químico con el símbolo Rh y el número atómico 45. Es un metal de transición raro, de color blanco plateado, duro e inerte. Es un miembro del grupo del platino. El rodio fue descubierto en 1803 por William Hyde Wollaston."
+  },
+  "palladium": {
+    "name": "Paladio",
+    "appearance": "metálico blanco plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El paladio es un elemento químico con el símbolo Pd y el número atómico 46. Es un metal raro y brillante de color blanco plateado descubierto en 1803 por William Hyde Wollaston. Lo nombró después del asteroide Palas, que a su vez recibió el nombre del epíteto de la diosa griega Atenea."
+  },
+  "silver": {
+    "name": "Plata",
+    "appearance": "metal blanco plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "La plata es un elemento químico con el símbolo Ag y el número atómico 47. Un metal de transición blando, blanco y lustroso, exhibe la conductividad eléctrica, la conductividad térmica y la reflectividad más altas de cualquier metal."
+  },
+  "cadmium": {
+    "name": "Cadmio",
+    "appearance": "metálico gris plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El cadmio es un elemento químico con el símbolo Cd y el número atómico 48. Este metal blando, de color blanco azulado, es químicamente similar a los otros dos metales estables en el grupo 12, zinc y mercurio."
+  },
+  "indium": {
+    "name": "Indio",
+    "appearance": "metálico gris plateado lustroso",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El indio es un elemento químico con el símbolo In y el número atómico 49. Es un metal post-transición que constituye 0,21 partes por millón de la corteza terrestre. El indio es muy blando, maleable y fácilmente fusible."
+  },
+  "tin": {
+    "name": "Estaño",
+    "appearance": "gris plateado",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El estaño es un elemento químico con el símbolo Sn y el número atómico 50. Es un metal post-transición en el grupo 14 de la tabla periódica. Se obtiene principalmente del mineral casiterita, que contiene estroncio dióxido, SnO2."
+  },
+  "antimony": {
+    "name": "Antimonio",
+    "appearance": "metálico gris plateado",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El antimonio es un elemento químico con el símbolo Sb y el número atómico 51. Un metaloide brillante, gris, se encuentra en la naturaleza principalmente como el mineral de sulfuro estibina (Sb2S3)."
+  },
+  "tellurium": {
+    "name": "Teluro",
+    "appearance": "metálico gris plateado",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El teluro es un elemento químico con el símbolo Te y el número atómico 52. Es un metaloide frágil, levemente tóxico, raro, de color blanco plateado. El teluro es químicamente similar al selenio y al azufre."
+  },
+  "iodine": {
+    "name": "Yodo",
+    "appearance": "gris metálico lustroso, violeta como gas",
+    "category": "no metal diatómico",
+    "phase": "Sólido",
+    "summary": "El yodo es un elemento químico con el símbolo I y el número atómico 53. El más pesado de los halógenos estables, existe como un sólido metálico lustroso, de color gris púrpura en condiciones estándar que se sublima en un gas violeta."
+  },
+  "xenon": {
+    "name": "Xenón",
+    "appearance": "gas incoloro, con un brillo azul en un campo eléctrico de alta tensión",
+    "category": "gas noble",
+    "phase": "Gas",
+    "summary": "El xenón es un elemento químico con el símbolo Xe y el número atómico 54. Es un gas noble incoloro, denso e inodoro que se encuentra en la atmósfera terrestre en cantidades traza."
+  },
+  "cesium": {
+    "name": "Cesio",
+    "appearance": "oro plateado",
+    "category": "metal alcalino",
+    "phase": "Sólido",
+    "summary": "El cesio es un elemento químico con el símbolo Cs y el número atómico 55. Es un metal alcalino blando, de color dorado plateado, con un punto de fusión de 28,5 °C (83,3 °F), lo que lo convierte en uno de los cinco metales que son líquidos a temperatura ambiente."
+  },
+  "barium": {
+    "name": "Bario",
+    "appearance": "blanco grisáceo",
+    "category": "metal alcalinotérreo",
+    "phase": "Sólido",
+    "summary": "El bario es un elemento químico con el símbolo Ba y el número atómico 56. Es el quinto elemento del grupo 2, un metal alcalinotérreo blando y plateado. Debido a su alta reactividad química, el bario nunca se encuentra en la naturaleza como elemento libre."
+  },
+  "lanthanum": {
+    "name": "Lantano",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El lantano es un elemento químico con el símbolo La y el número atómico 57. Es un metal blando, dúctil, de color blanco plateado que se empaña rápidamente cuando se expone al aire y es lo suficientemente blando como para ser cortado con un cuchillo."
+  },
+  "cerium": {
+    "name": "Cerio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El cerio es un elemento químico con el símbolo Ce y el número atómico 58. Es un metal blando, dúctil, de color blanco plateado que se oxida fácilmente en el aire. El cerio es el más abundante de los elementos de tierras raras."
+  },
+  "praseodymium": {
+    "name": "Praseodimio",
+    "appearance": "blanco grisáceo, lustroso",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El praseodimio es un elemento químico con el símbolo Pr y el número atómico 59. El praseodimio es un metal dúctil, maleable, de color blanco plateado, valorado por sus propiedades magnéticas, eléctricas, químicas y ópticas."
+  },
+  "neodymium": {
+    "name": "Neodimio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El neodimio es un elemento químico con el símbolo Nd y el número atómico 60. Es un metal blanco plateado blando que se empaña en el aire. El neodimio fue descubierto en 1885 por el químico austríaco Baron Carl Auer von Welsbach."
+  }
+}

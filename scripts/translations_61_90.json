@@ -1,0 +1,212 @@
+{
+  "promethium": {
+    "name": "Prometio",
+    "appearance": "metálico",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El prometio es un elemento químico con el símbolo Pm y el número atómico 61. Todos sus isótopos son radiactivos; es extremadamente raro, solo hay unos 500-600 gramos de forma natural en la corteza terrestre en cualquier momento."
+  },
+  "samarium": {
+    "name": "Samario",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El samario es un elemento químico con el símbolo Sm y el número atómico 62. Es un metal plateado moderadamente duro que se oxida lentamente en el aire. Siendo un miembro típico de la serie de lantánidos, el samario generalmente posee el estado de oxidación +3."
+  },
+  "europium": {
+    "name": "Europio",
+    "appearance": "plateado, a menudo con empañamiento negro",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El europio es un elemento químico con el símbolo Eu y el número atómico 63. El europio es el más reactivo de los elementos de tierras raras, debiendo almacenarse en un fluido inerte para protegerlo de la oxidación atmosférica."
+  },
+  "gadolinium": {
+    "name": "Gadolinio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El gadolinio es un elemento químico con el símbolo Gd y el número atómico 64. El gadolinio es un metal de tierras raras de color blanco plateado, maleable y dúctil. Se encuentra en la naturaleza solo en forma oxidada, y cuando se separa, tiene un tinte blanco plateado."
+  },
+  "terbium": {
+    "name": "Terbio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El terbio es un elemento químico con el símbolo Tb y el número atómico 65. Es un metal de tierras raras de color blanco plateado que es maleable, dúctil y lo suficientemente blando como para ser cortado con un cuchillo. El terbio nunca se encuentra en la naturaleza como elemento libre."
+  },
+  "dysprosium": {
+    "name": "Disprosio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El disprosio es un elemento químico con el símbolo Dy y el número atómico 66. Es un elemento de tierras raras con un brillo metálico plateado. El disprosio nunca se encuentra en la naturaleza como elemento libre, aunque se encuentra en varios minerales, como la xenotima."
+  },
+  "holmium": {
+    "name": "Holmio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El holmio es un elemento químico con el símbolo Ho y el número atómico 67. Parte de la serie de lantánidos, el holmio es un elemento de tierras raras. El holmio fue descubierto por los químicos suizos Marc Delafontaine y Jacques-Louis Soret en 1878."
+  },
+  "erbium": {
+    "name": "Erbio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El erbio es un elemento químico con el símbolo Er y el número atómico 68. Un metal sólido de color blanco plateado cuando se aísla artificialmente, el erbio natural siempre se encuentra en combinación química con otros elementos."
+  },
+  "thulium": {
+    "name": "Tulio",
+    "appearance": "gris plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El tulio es un elemento químico con el símbolo Tm y el número atómico 69. Es el decimotercero y penúltimo elemento de la serie de lantánidos. Al igual que los otros lantánidos, el estado de oxidación más común es +3."
+  },
+  "ytterbium": {
+    "name": "Iterbio",
+    "appearance": "lustre metálico plateado brillante",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El iterbio es un elemento químico con el símbolo Yb y el número atómico 70. Es el decimocuarto y último elemento de la serie de lantánidos, que es la base de la relativa estabilidad de su estado de oxidación +2."
+  },
+  "lutetium": {
+    "name": "Lutecio",
+    "appearance": "blanco plateado",
+    "category": "lantánido",
+    "phase": "Sólido",
+    "summary": "El lutecio es un elemento químico con el símbolo Lu y el número atómico 71. Es un metal blanco plateado, que resiste la corrosión en aire seco, pero no en aire húmedo. El lutecio es el último elemento de la serie de lantánidos."
+  },
+  "hafnium": {
+    "name": "Hafnio",
+    "appearance": "gris acero",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El hafnio es un elemento químico con el símbolo Hf y el número atómico 72. Un metal de transición tetravalente lustroso, de color gris plateado, el hafnio se parece químicamente al circonio y se encuentra en muchos minerales de circonio."
+  },
+  "tantalum": {
+    "name": "Tantalio",
+    "appearance": "gris azulado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El tantalio es un elemento químico con el símbolo Ta y el número atómico 73. Anteriormente conocido como tantalium, fue nombrado después de Tántalo, una figura de la mitología griega. El tantalio es un metal raro, duro, azul grisáceo y lustroso."
+  },
+  "tungsten": {
+    "name": "Wolframio",
+    "appearance": "blanco grisáceo, lustroso",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El wolframio, también conocido como tungsteno, es un elemento químico con el símbolo W y el número atómico 74. El nombre tungsteno proviene del sueco tung sten, que significa 'piedra pesada'. El wolframio es un metal raro que se encuentra naturalmente en la Tierra."
+  },
+  "rhenium": {
+    "name": "Renio",
+    "appearance": "blanco grisáceo",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El renio es un elemento químico con el símbolo Re y el número atómico 75. Es un metal de transición de color blanco plateado, pesado, del grupo 7 en la tabla periódica. Con una concentración promedio estimada de 1 parte por mil millones, el renio es uno de los elementos más raros."
+  },
+  "osmium": {
+    "name": "Osmio",
+    "appearance": "azul plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El osmio es un elemento químico con el símbolo Os y el número atómico 76. Es un metal de transición duro, quebradizo, de color blanco azulado en el grupo del platino que se encuentra como un elemento traza en aleaciones, principalmente en minerales de platino."
+  },
+  "iridium": {
+    "name": "Iridio",
+    "appearance": "blanco plateado",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El iridio es un elemento químico con el símbolo Ir y el número atómico 77. Un metal de transición muy duro, quebradizo, blanco plateado del grupo del platino, el iridio es el segundo elemento más denso (después del osmio)."
+  },
+  "platinum": {
+    "name": "Platino",
+    "appearance": "blanco grisáceo",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El platino es un elemento químico con el símbolo Pt y el número atómico 78. Es un metal de transición denso, maleable, dúctil, altamente inreactivo, precioso, de color blanco plateado. Su nombre se deriva del término español platina, que significa 'platita'."
+  },
+  "gold": {
+    "name": "Oro",
+    "appearance": "amarillo metálico",
+    "category": "metal de transición",
+    "phase": "Sólido",
+    "summary": "El oro es un elemento químico con el símbolo Au (del latín: aurum) y el número atómico 79. En su forma más pura, es un metal brillante, amarillo ligeramente rojizo, denso, blando, maleable y dúctil. Químicamente, el oro es un metal de transición."
+  },
+  "mercury": {
+    "name": "Mercurio",
+    "appearance": "plateado",
+    "category": "metal de transición",
+    "phase": "Líquido",
+    "summary": "El mercurio es un elemento químico con el símbolo Hg y el número atómico 80. Es comúnmente conocido como azogue y anteriormente se llamaba hidrargirium. Un elemento de bloque d pesado y plateado, el mercurio es el único elemento metálico que es líquido en condiciones estándar."
+  },
+  "thallium": {
+    "name": "Talio",
+    "appearance": "blanco plateado, se empaña a gris oscuro en el aire",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El talio es un elemento químico con el símbolo Tl y el número atómico 81. Este suave metal maleable de color gris post-transición no se encuentra libre en la naturaleza. Cuando se aísla, se parece al estaño, pero se decolora cuando se expone al aire."
+  },
+  "lead": {
+    "name": "Plomo",
+    "appearance": "gris metálico",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El plomo es un elemento químico en el grupo del carbono con el símbolo Pb (del latín: plumbum) y el número atómico 82. El plomo es un metal blando y maleable, que se considera un metal pesado y un metal post-transición."
+  },
+  "bismuth": {
+    "name": "Bismuto",
+    "appearance": "lustre metálico plateado, brilla de color púrpura en la oscuridad",
+    "category": "metal post-transición",
+    "phase": "Sólido",
+    "summary": "El bismuto es un elemento químico con el símbolo Bi y el número atómico 83. El bismuto, un metal post-transición pentavalente y uno de los pnictógenos, se parece químicamente a sus homólogos más ligeros, arsénico y antimonio."
+  },
+  "polonium": {
+    "name": "Polonio",
+    "appearance": "plateado",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El polonio es un elemento químico con el símbolo Po y el número atómico 84, descubierto en 1898 por Marie y Pierre Curie. Un elemento raro y altamente radiactivo sin isótopos estables, el polonio es químicamente similar al selenio y al teluro."
+  },
+  "astatine": {
+    "name": "Astato",
+    "appearance": "metálico",
+    "category": "metaloide",
+    "phase": "Sólido",
+    "summary": "El astato es un elemento químico radiactivo con el símbolo At y el número atómico 85. Es el elemento natural más raro en la corteza terrestre, ocurriendo solo como el producto de la desintegración de varios elementos más pesados."
+  },
+  "radon": {
+    "name": "Radón",
+    "appearance": "gas incoloro, ocasionalmente brilla de color verde o rojo en tubos de descarga",
+    "category": "gas noble",
+    "phase": "Gas",
+    "summary": "El radón es un elemento químico con el símbolo Rn y el número atómico 86. Es un gas noble radiactivo, incoloro, inodoro e insípido. Ocurre naturalmente en cantidades diminutas como un paso intermedio en las cadenas de desintegración radiactiva."
+  },
+  "francium": {
+    "name": "Francio",
+    "appearance": "metálico",
+    "category": "metal alcalino",
+    "phase": "Sólido",
+    "summary": "El francio es un elemento químico con el símbolo Fr y el número atómico 87. Antes de su descubrimiento, se conocía como eka-cesio. Es extremadamente radiactivo; su isótopo más estable, el francio-223, tiene una vida media de solo 22 minutos."
+  },
+  "radium": {
+    "name": "Radio",
+    "appearance": "blanco plateado",
+    "category": "metal alcalinotérreo",
+    "phase": "Sólido",
+    "summary": "El radio es un elemento químico con el símbolo Ra y el número atómico 88. Es el sexto elemento del grupo 2 de la tabla periódica, también conocidos como metales alcalinotérreos. El radio puro es de color blanco plateado."
+  },
+  "actinium": {
+    "name": "Actinio",
+    "appearance": "blanco plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El actinio es un elemento químico radiactivo con el símbolo Ac y el número atómico 89, que fue descubierto en 1899. Fue el primer elemento radiactivo no primordial en ser aislado. El actinio dio nombre a la serie de los actínidos."
+  },
+  "thorium": {
+    "name": "Torio",
+    "appearance": "blanco plateado",
+    "category": "actínido",
+    "phase": "Sólido",
+    "summary": "El torio es un elemento químico radiactivo con el símbolo Th y el número atómico 90. El torio es un metal actínido débilmente radiactivo que se encuentra naturalmente en la naturaleza. Fue descubierto en 1829 por el químico noruego Morten Thrane Esmark."
+  }
+}
