@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div 
-      className="w-screen h-screen bg-gray-950 relative overflow-hidden flex"
+      className="w-screen h-[100dvh] bg-gray-950 relative overflow-hidden flex"
       onDragOver={handleDragOver}
       onDrop={handleDrop}
     >
@@ -36,7 +36,7 @@ function App() {
         <Atom2D />
       ) : (
         <div className="absolute inset-0 w-full h-full">
-            <Canvas camera={{ position: [0, 0, 12] }}>
+            <Canvas dpr={[1, 1.5]} camera={{ position: [0, 0, 12] }}>
               <color attach="background" args={['#030712']} />
               <OrbitControls 
                 enablePan={false}  // Deshabilitar pan evitará que el left-click (mapeado a Pan) haga algo

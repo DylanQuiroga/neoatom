@@ -116,7 +116,7 @@ const OverlayHUD = () => {
   }
 
   return (
-    <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-4 sm:p-8 font-sans animate-in fade-in duration-300">
+    <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-4 pb-12 sm:pb-8 sm:p-8 font-sans animate-in fade-in duration-300">
       {/* Header Info Panel */}
       <div className="flex flex-col sm:flex-row justify-between items-start pointer-events-none gap-2 sm:gap-4 w-full">
         {/* Mobile Header Nav (Only visible on mobile) */}
