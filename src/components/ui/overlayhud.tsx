@@ -4,7 +4,7 @@ import { getElementData } from '../../utils/elements';
 import { Atom, Play, Pause, List, ChevronUp, ChevronDown, Flame, Radiation, Skull, Droplet, EyeOff, Info } from 'lucide-react';
 import atomsData from '../../data/atoms.json';
 
-const ParticleDispenser = ({ type, color, label, onClick }: { type: ParticleType, color: string, label: string, onClick: () => void }) => {
+const ParticleDispenser = ({ type, color, label, count, onAdd, onRemove }: { type: ParticleType, color: string, label: string, count: number, onAdd: () => void, onRemove: () => void }) => {
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.dataTransfer.setData('particleType', type);
     e.dataTransfer.effectAllowed = 'copy';
@@ -14,13 +14,30 @@ const ParticleDispenser = ({ type, color, label, onClick }: { type: ParticleType
     <div
       draggable
       onDragStart={handleDragStart}
-      onClick={onClick}
-      className={`flex flex-col items-center justify-center p-2 sm:p-4 rounded-xl cursor-pointer active:scale-95 backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-${color}-500/20 max-w-[85px] sm:max-w-[120px] w-full mt-auto`}
+      className={`flex flex-col items-center justify-center p-2 sm:p-4 rounded-xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-${color}-500/20 w-[95px] sm:w-[130px] mt-auto`}
     >
-      <div className={`w-6 h-6 sm:w-10 sm:h-10 rounded-full mb-1 sm:mb-3 shadow-[0_0_15px_rgba(0,0,0,0.5)] ${color} border border-white/20`} />
+      <div 
+        onClick={onAdd}
+        className={`w-6 h-6 sm:w-10 sm:h-10 rounded-full mb-2 sm:mb-3 shadow-[0_0_15px_rgba(0,0,0,0.5)] ${color} border border-white/20 cursor-pointer active:scale-95`} 
+      />
       <span className="text-white font-medium text-[10px] sm:text-sm tracking-wider uppercase">{label}</span>
-      <span className="text-white/50 text-[8px] sm:text-xs mt-1 text-center leading-tight hidden sm:block">Tocar o Arrastrar</span>
-      <span className="text-white/50 text-[8px] sm:text-xs mt-1 text-center leading-tight sm:hidden">+ 1</span>
+      
+      <div className="flex items-center justify-between w-full mt-2 bg-black/40 rounded-lg p-1 border border-white/5">
+        <button 
+          onClick={onRemove}
+          disabled={count <= 0}
+          className={`w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-md font-bold text-lg active:scale-95 transition-colors ${count > 0 ? 'text-white/70 hover:bg-white/10 hover:text-white cursor-pointer' : 'text-white/20 cursor-not-allowed'}`}
+        >
+          -
+        </button>
+        <span className="text-white/90 font-mono text-xs sm:text-sm">{count}</span>
+        <button 
+          onClick={onAdd}
+          className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-md text-white/70 hover:bg-white/10 hover:text-white font-bold text-lg cursor-pointer active:scale-95 transition-colors"
+        >
+          +
+        </button>
+      </div>
     </div>
   );
 };
@@ -292,9 +309,9 @@ const OverlayHUD = () => {
       <div className="flex flex-col gap-4 sm:gap-8 mt-auto w-full pointer-events-none">
         {/* Particle Dispensers (Mobile Only - Above Footer) */}
         <div className="flex sm:hidden justify-center gap-2 pointer-events-auto">
-          <ParticleDispenser type="proton" color="bg-gradient-to-br from-red-500 to-rose-700" label="Protón" onClick={() => addParticle('proton')} />
-          <ParticleDispenser type="neutron" color="bg-gradient-to-br from-blue-500 to-indigo-700" label="Neutrón" onClick={() => addParticle('neutron')} />
-          <ParticleDispenser type="electron" color="bg-gradient-to-br from-yellow-400 to-amber-600" label="Electrón" onClick={() => addParticle('electron')} />
+          <ParticleDispenser type="proton" color="bg-gradient-to-br from-red-500 to-rose-700" label="Protón" count={protons} onAdd={() => addParticle('proton')} onRemove={() => removeParticle('proton')} />
+          <ParticleDispenser type="neutron" color="bg-gradient-to-br from-blue-500 to-indigo-700" label="Neutrón" count={neutrons} onAdd={() => addParticle('neutron')} onRemove={() => removeParticle('neutron')} />
+          <ParticleDispenser type="electron" color="bg-gradient-to-br from-yellow-400 to-amber-600" label="Electrón" count={electrons} onAdd={() => addParticle('electron')} onRemove={() => removeParticle('electron')} />
         </div>
 
         {/* Footer Bar (Bottom Left & Right) */}
@@ -368,9 +385,9 @@ const OverlayHUD = () => {
 
       {/* Particle Dispensers (Desktop Only - Absolute Bottom Center) */}
       <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 justify-center gap-6 pointer-events-auto z-10 w-full max-w-none px-0">
-        <ParticleDispenser type="proton" color="bg-gradient-to-br from-red-500 to-rose-700" label="Protón" onClick={() => addParticle('proton')} />
-        <ParticleDispenser type="neutron" color="bg-gradient-to-br from-blue-500 to-indigo-700" label="Neutrón" onClick={() => addParticle('neutron')} />
-        <ParticleDispenser type="electron" color="bg-gradient-to-br from-yellow-400 to-amber-600" label="Electrón" onClick={() => addParticle('electron')} />
+        <ParticleDispenser type="proton" color="bg-gradient-to-br from-red-500 to-rose-700" label="Protón" count={protons} onAdd={() => addParticle('proton')} onRemove={() => removeParticle('proton')} />
+        <ParticleDispenser type="neutron" color="bg-gradient-to-br from-blue-500 to-indigo-700" label="Neutrón" count={neutrons} onAdd={() => addParticle('neutron')} onRemove={() => removeParticle('neutron')} />
+        <ParticleDispenser type="electron" color="bg-gradient-to-br from-yellow-400 to-amber-600" label="Electrón" count={electrons} onAdd={() => addParticle('electron')} onRemove={() => removeParticle('electron')} />
       </div>
     </div>
   );
