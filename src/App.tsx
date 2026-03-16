@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Scene from './components/3d/scene';
 import OverlayHUD from './components/ui/overlayhud';
 import Atom2D from './components/ui/Atom2D';
+import LoadingScreen from './components/ui/LoadingScreen';
 import { useAtomStore, ParticleType } from './store/useAtomStore';
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
       onDragOver={handleDragOver}
       onDrop={handleDrop}
     >
+      {/* Pantalla de Carga Global */}
+      <LoadingScreen />
+
       {/* Capa 2D: Interfaz de Usuario y HUD principal */}
       <OverlayHUD />
 
@@ -49,7 +53,9 @@ function App() {
                   RIGHT: 0 // 0 = rotate
                 }}
               />
-              <Scene />
+              <Suspense fallback={null}>
+                <Scene />
+              </Suspense>
             </Canvas>
         </div>
       )}
