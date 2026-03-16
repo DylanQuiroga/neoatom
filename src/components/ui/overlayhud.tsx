@@ -87,14 +87,16 @@ const OverlayHUD = () => {
   }, [activeTooltip]);
 
   useEffect(() => {
+    // Solo registrar listeners de restauración si la UI está oculta
+    if (isUiVisible) return;
+
     const handleRestoreUI = () => {
-      if (!isUiVisible) {
-        setIsUiVisible(true);
-      }
+      setIsUiVisible(true);
     };
 
     window.addEventListener('keydown', handleRestoreUI);
     window.addEventListener('dblclick', handleRestoreUI);
+    
     // Para touch (doble tap)
     let lastTap = 0;
     const handleTouchEnd = (e: TouchEvent) => {
@@ -120,20 +122,8 @@ const OverlayHUD = () => {
     setShowUiHint(true);
   };
 
-  if (!isUiVisible) {
-    return (
-      <div className="absolute inset-0 pointer-events-none z-50 flex items-start justify-center p-8">
-        {showUiHint && (
-          <div className="bg-black/80 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full shadow-2xl animate-fade-in-out flex items-center gap-3">
-            <Info className="w-5 h-5 text-blue-400" />
-            <span className="text-sm font-medium tracking-wide">
-              Mueve el ratón o presiona cualquier tecla (Doble toque en móvil) para volver.
-            </span>
-          </div>
-        )}
-      </div>
-    );
-  }
+  // No early return here to keep the component structure stable and avoid sibling issues.
+  // We will handle the visibility inside the main return using CSS classes.
 
   const specialParticle = React.useMemo(() => {
     if (protons === 2 && neutrons === 2 && electrons === 0) return { name: 'Partícula Alfa', category: 'Radiación Ionizante', symbol: 'α' };
@@ -146,9 +136,21 @@ const OverlayHUD = () => {
   }, [protons, neutrons, electrons]);
 
   return (
-    <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-4 pb-12 sm:pb-8 sm:p-8 font-sans animate-in fade-in duration-300">
-      {/* Header Info Panel */}
-      <div className="flex flex-col sm:flex-row justify-between items-start pointer-events-none gap-2 sm:gap-4 w-full">
+    <div className={`absolute inset-0 pointer-events-none z-10 flex flex-col justify-between p-4 pb-12 sm:pb-8 sm:p-8 font-sans transition-all duration-500`}>
+      {/* UI Hint (When hidden) */}
+      {!isUiVisible && showUiHint && (
+        <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full shadow-2xl animate-fade-in-out flex items-center gap-3 z-50">
+          <Info className="w-5 h-5 text-blue-400" />
+          <span className="text-sm font-medium tracking-wide">
+            Doble toque o cualquier tecla para volver.
+          </span>
+        </div>
+      )}
+
+      {/* Main HUD content (Hidable panels) */}
+      <div className={`flex flex-col gap-4 w-full h-full justify-between transition-all duration-500 ${isUiVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none invisible'}`}>
+        {/* Header Info Panel */}
+        <div className="flex flex-col sm:flex-row justify-between items-start pointer-events-none gap-2 sm:gap-4 w-full">
         {/* Mobile Header Nav (Only visible on mobile) */}
         <div className="flex w-full justify-between sm:hidden pointer-events-auto gap-2">
           <button
@@ -317,13 +319,16 @@ const OverlayHUD = () => {
                   </label>
                 )}
 
-                <button
-                  onClick={handleHideUI}
-                  className="flex items-center justify-center gap-2 mt-2 p-2 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 rounded-xl text-red-400 transition-all text-xs font-medium cursor-pointer"
-                >
-                  <EyeOff className="w-4 h-4" />
-                  <span>Ocultar UI</span>
-                </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleHideUI();
+                    }}
+                    className="flex items-center justify-center gap-2 mt-2 p-2 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 rounded-xl text-red-400 transition-all text-xs font-medium cursor-pointer"
+                  >
+                    <EyeOff className="w-4 h-4" />
+                    <span>Ocultar UI</span>
+                  </button>
               </>
             )}
           </div>
@@ -405,18 +410,19 @@ const OverlayHUD = () => {
               );
             })}
           </div>
+          </div>
         </div>
       </div>
 
       {/* Particle Dispensers (Desktop Only - Absolute Bottom Center) */}
-      <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 justify-center gap-6 pointer-events-auto z-10 w-full max-w-none px-0">
+      <div className={`hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 justify-center gap-6 pointer-events-auto z-10 w-full max-w-none px-0 transition-opacity duration-300 ${isUiVisible ? 'opacity-100' : 'opacity-0 invisible pointer-events-none'}`}>
         <ParticleDispenser type="proton" color="bg-gradient-to-br from-red-500 to-rose-700" label="Protón" count={protons} onAdd={() => addParticle('proton')} onRemove={() => removeParticle('proton')} />
         <ParticleDispenser type="neutron" color="bg-gradient-to-br from-blue-500 to-indigo-700" label="Neutrón" count={neutrons} onAdd={() => addParticle('neutron')} onRemove={() => removeParticle('neutron')} />
         <ParticleDispenser type="electron" color="bg-gradient-to-br from-yellow-400 to-amber-600" label="Electrón" count={electrons} onAdd={() => addParticle('electron')} onRemove={() => removeParticle('electron')} />
       </div>
 
       <ElementDetailsModal 
-        isOpen={isDetailsOpen} 
+        isOpen={isDetailsOpen && isUiVisible} 
         onClose={() => setIsDetailsOpen(false)} 
         data={periodicDataRaw} 
         atomicNumber={protons} 
