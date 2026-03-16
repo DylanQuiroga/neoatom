@@ -11,5 +11,5 @@ export interface ElementData {
 export const getElementData = (protons: number): ElementData | null => {
   if (protons === 0) return null;
   const data = (elementsData as Record<string, ElementData>)[protons.toString()];
-  return data || { atomicNumber: protons, symbol: '?', name: 'Elemento Desconocido', category: 'Desconocido' };
+  return data || { atomicNumber: protons, symbol: '?', name: 'Elemento desconocido', category: 'Desconocido' };
 };

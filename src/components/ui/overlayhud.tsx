@@ -40,10 +40,10 @@ const OverlayHUD = () => {
   const hazards = element?.hazards || [];
 
   const hazardConfig = [
-    { id: 'Inflamable', label: 'Inflamable', Icon: Flame, activeClass: 'text-orange-400 bg-orange-500/20 border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.4)]' },
-    { id: 'Corrosivo', label: 'Corrosivo', Icon: Droplet, activeClass: 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30 shadow-[0_0_15px_rgba(250,204,21,0.4)]' },
-    { id: 'Tóxico', label: 'Tóxico', Icon: Skull, activeClass: 'text-purple-400 bg-purple-500/20 border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)]' },
-    { id: 'Radioactivo', label: 'Radiactivo', Icon: Radiation, activeClass: 'text-green-400 bg-green-500/20 border-green-500/30 shadow-[0_0_15px_rgba(74,222,128,0.4)]' }
+    { id: 'inflamable', label: 'inflamable', Icon: Flame, activeClass: 'text-orange-400 bg-orange-500/20 border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.4)]' },
+    { id: 'corrosivo', label: 'corrosivo', Icon: Droplet, activeClass: 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30 shadow-[0_0_15px_rgba(250,204,21,0.4)]' },
+    { id: 'tóxico', label: 'tóxico', Icon: Skull, activeClass: 'text-purple-400 bg-purple-500/20 border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)]' },
+    { id: 'radioactivo', label: 'radiactivo', Icon: Radiation, activeClass: 'text-green-400 bg-green-500/20 border-green-500/30 shadow-[0_0_15px_rgba(74,222,128,0.4)]' }
   ];
 
   const [isUiVisible, setIsUiVisible] = useState(true);
@@ -305,7 +305,7 @@ const OverlayHUD = () => {
             {isListOpen && (
               <div className="absolute bottom-full left-0 mb-2 w-48 sm:w-64 max-h-[40vh] overflow-y-auto bg-black/60 backdrop-blur-xl border border-white/10 rounded-xl p-2 flex flex-col gap-1 shadow-2xl">
                 <div className="text-xs text-white/50 font-semibold px-2 pb-2 mb-1 border-b border-white/10 uppercase tracking-widest sticky top-0 bg-black/60 backdrop-blur-xl z-10">
-                  Seleccionar Elemento
+                  Seleccionar elemento
                 </div>
                 {atomsData.map((atom) => (
                   <button
@@ -330,7 +330,7 @@ const OverlayHUD = () => {
             >
               <div className="flex items-center gap-2">
                 <List className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
-                <span className="font-medium text-xs sm:text-sm hidden sm:inline">Lista de Átomos</span>
+                <span className="font-medium text-xs sm:text-sm hidden sm:inline">Lista de átomos</span>
                 <span className="font-medium text-xs sm:hidden">Elementos</span>
               </div>
               {isListOpen ? <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 text-white/50 ml-1" /> : <ChevronUp className="w-3 h-3 sm:w-4 sm:h-4 text-white/50 ml-1" />}
@@ -342,7 +342,7 @@ const OverlayHUD = () => {
             {hazardConfig.map(({ id, label, Icon, activeClass }) => {
               const isActive = hazards.includes(id);
               const isTooltipVisible = activeTooltip === id;
-              
+
               return (
                 <div key={id} className="relative">
                   {/* Tooltip superpuesto para móvil */}

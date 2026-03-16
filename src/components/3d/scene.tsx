@@ -61,13 +61,15 @@ function Nucleus({ protons, neutrons }: { protons: number, neutrons: number }) {
     <group ref={groupRef}>
       {particles.map((p, i) => (
         <mesh key={`nuc-${i}`} position={p.position}>
-          <sphereGeometry args={[PARTICLE_SIZE, 32, 32]} />
-          <meshPhysicalMaterial 
+          {/* Reduced segments from 32x32 to 12x12 for 85% less geometry overhead */}
+          <sphereGeometry args={[PARTICLE_SIZE, 12, 12]} />
+          {/* Swapped from heavy PhysicalMaterial to StandardMaterial */}
+          <meshStandardMaterial 
             color={p.type === 'proton' ? '#ef4444' : '#3b82f6'} 
-            roughness={0.2}
-            metalness={0.1}
-            clearcoat={1}
+            roughness={0.4}
+            metalness={0.2}
             emissive={p.type === 'proton' ? '#450a0a' : '#172554'}
+            emissiveIntensity={0.5}
           />
         </mesh>
       ))}
@@ -138,15 +140,18 @@ function ElectronShell({ shellIndex, count }: { shellIndex: number, count: numbe
         <group ref={groupRef}>
             {/* Anillo visual para la órbita */}
             <mesh rotation={[Math.PI/2, 0, 0]}>
-                <torusGeometry args={[radius, 0.02, 16, 100]} />
+                {/* Reduced from 16x100 to 4x48 segments */}
+                <torusGeometry args={[radius, 0.02, 4, 48]} />
                 <meshBasicMaterial color="#ffffff" transparent opacity={0.15} />
             </mesh>
 
             {/* Los electrones */}
             {electrons.map((e, i) => (
                 <mesh key={`el-${i}`} position={[Math.cos(e.angle) * radius, 0, Math.sin(e.angle) * radius]}>
-                    <sphereGeometry args={[PARTICLE_SIZE * 0.6, 16, 16]} />
-                    <meshPhysicalMaterial 
+                    {/* Reduced segments from 16x16 to 8x8 */}
+                    <sphereGeometry args={[PARTICLE_SIZE * 0.6, 8, 8]} />
+                    {/* Swapped from heavy PhysicalMaterial to StandardMaterial */}
+                    <meshStandardMaterial 
                         color="#facc15" 
                         emissive="#facc15"
                         emissiveIntensity={2}
@@ -173,7 +178,8 @@ export default function Scene() {
       </group>
 
       <EffectComposer>
-        <Bloom luminanceThreshold={0.5} luminanceSmoothing={0.9} height={300} intensity={1.5} />
+        {/* Switched to mipmapBlur for faster mobile bloom instead of fixed height */}
+        <Bloom luminanceThreshold={0.5} luminanceSmoothing={0.9} mipmapBlur intensity={1.5} />
       </EffectComposer>
     </>
   );
