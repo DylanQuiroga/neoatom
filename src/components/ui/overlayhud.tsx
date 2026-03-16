@@ -40,10 +40,10 @@ const OverlayHUD = () => {
   const hazards = element?.hazards || [];
 
   const hazardConfig = [
-    { id: 'inflamable', label: 'inflamable', Icon: Flame, activeClass: 'text-orange-400 bg-orange-500/20 border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.4)]' },
-    { id: 'corrosivo', label: 'corrosivo', Icon: Droplet, activeClass: 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30 shadow-[0_0_15px_rgba(250,204,21,0.4)]' },
-    { id: 'tóxico', label: 'tóxico', Icon: Skull, activeClass: 'text-purple-400 bg-purple-500/20 border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)]' },
-    { id: 'radioactivo', label: 'radiactivo', Icon: Radiation, activeClass: 'text-green-400 bg-green-500/20 border-green-500/30 shadow-[0_0_15px_rgba(74,222,128,0.4)]' }
+    { id: 'Inflamable', label: 'inflamable', Icon: Flame, activeClass: 'text-orange-400 bg-orange-500/20 border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.4)]' },
+    { id: 'Corrosivo', label: 'corrosivo', Icon: Droplet, activeClass: 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30 shadow-[0_0_15px_rgba(250,204,21,0.4)]' },
+    { id: 'Tóxico', label: 'tóxico', Icon: Skull, activeClass: 'text-purple-400 bg-purple-500/20 border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)]' },
+    { id: 'Radioactivo', label: 'radiactivo', Icon: Radiation, activeClass: 'text-green-400 bg-green-500/20 border-green-500/30 shadow-[0_0_15px_rgba(74,222,128,0.4)]' }
   ];
 
   const [isUiVisible, setIsUiVisible] = useState(true);
