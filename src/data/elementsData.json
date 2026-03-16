@@ -38,7 +38,9 @@
     "symbol": "B",
     "name": "Boro",
     "category": "Metaloide",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "6": {
     "atomicNumber": 6,
@@ -163,28 +165,36 @@
     "symbol": "Ca",
     "name": "Calcio",
     "category": "Metal alcalinotérreo",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "21": {
     "atomicNumber": 21,
     "symbol": "Sc",
     "name": "Escandio",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "22": {
     "atomicNumber": 22,
     "symbol": "Ti",
     "name": "Titanio",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "23": {
     "atomicNumber": 23,
     "symbol": "V",
     "name": "Vanadio",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "24": {
     "atomicNumber": 24,
@@ -200,7 +210,9 @@
     "symbol": "Mn",
     "name": "Manganeso",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "26": {
     "atomicNumber": 26,
@@ -214,21 +226,27 @@
     "symbol": "Co",
     "name": "Cobalto",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "28": {
     "atomicNumber": 28,
     "symbol": "Ni",
     "name": "Níquel",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "29": {
     "atomicNumber": 29,
     "symbol": "Cu",
     "name": "Cobre",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "30": {
     "atomicNumber": 30,
@@ -265,7 +283,9 @@
     "symbol": "Se",
     "name": "Selenio",
     "category": "No metal",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "35": {
     "atomicNumber": 35,
@@ -298,21 +318,27 @@
     "symbol": "Sr",
     "name": "Estroncio",
     "category": "Metal alcalinotérreo",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "39": {
     "atomicNumber": 39,
     "symbol": "Y",
     "name": "Itrio",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "40": {
     "atomicNumber": 40,
     "symbol": "Zr",
     "name": "Zirconio",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "41": {
     "atomicNumber": 41,
@@ -334,8 +360,8 @@
     "name": "Tecnecio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "44": {
@@ -364,7 +390,9 @@
     "symbol": "Ag",
     "name": "Plata",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "48": {
     "atomicNumber": 48,
@@ -387,21 +415,27 @@
     "symbol": "Sn",
     "name": "Estaño",
     "category": "Metal del bloque p",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "51": {
     "atomicNumber": 51,
     "symbol": "Sb",
     "name": "Antimonio",
     "category": "Metaloide",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "52": {
     "atomicNumber": 52,
     "symbol": "Te",
     "name": "Telurio",
     "category": "Metaloide",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "53": {
     "atomicNumber": 53,
@@ -434,7 +468,10 @@
     "symbol": "Ba",
     "name": "Bario",
     "category": "Metal alcalinotérreo",
-    "hazards": []
+    "hazards": [
+      "Inflamable",
+      "Tóxico"
+    ]
   },
   "57": {
     "atomicNumber": 57,
@@ -448,21 +485,27 @@
     "symbol": "Ce",
     "name": "Cerio",
     "category": "Lantánido",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "59": {
     "atomicNumber": 59,
     "symbol": "Pr",
     "name": "Praseodimio",
     "category": "Lantánido",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "60": {
     "atomicNumber": 60,
     "symbol": "Nd",
     "name": "Neodimio",
     "category": "Lantánido",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "61": {
     "atomicNumber": 61,
@@ -470,8 +513,8 @@
     "name": "Prometio",
     "category": "Lantánido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "62": {
@@ -479,14 +522,18 @@
     "symbol": "Sm",
     "name": "Samario",
     "category": "Lantánido",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "63": {
     "atomicNumber": 63,
     "symbol": "Eu",
     "name": "Europio",
     "category": "Lantánido",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "64": {
     "atomicNumber": 64,
@@ -549,7 +596,9 @@
     "symbol": "Hf",
     "name": "Hafnio",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Inflamable"
+    ]
   },
   "73": {
     "atomicNumber": 73,
@@ -593,7 +642,9 @@
     "symbol": "Pt",
     "name": "Platino",
     "category": "Metal de transición",
-    "hazards": []
+    "hazards": [
+      "Tóxico"
+    ]
   },
   "79": {
     "atomicNumber": 79,
@@ -644,8 +695,8 @@
     "name": "Polonio",
     "category": "Metaloide",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "85": {
@@ -654,8 +705,8 @@
     "name": "Astato",
     "category": "Halógeno",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "86": {
@@ -664,8 +715,8 @@
     "name": "Radón",
     "category": "Gas noble",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "87": {
@@ -674,9 +725,9 @@
     "name": "Francio",
     "category": "Metal alcalino",
     "hazards": [
-      "Radioactivo",
       "Inflamable",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "88": {
@@ -685,8 +736,9 @@
     "name": "Radio",
     "category": "Metal alcalinotérreo",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Inflamable",
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "89": {
@@ -695,8 +747,8 @@
     "name": "Actinio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "90": {
@@ -705,8 +757,8 @@
     "name": "Torio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "91": {
@@ -715,8 +767,8 @@
     "name": "Protactinio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "92": {
@@ -725,8 +777,8 @@
     "name": "Uranio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "93": {
@@ -735,8 +787,8 @@
     "name": "Neptunio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "94": {
@@ -745,8 +797,8 @@
     "name": "Plutonio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "95": {
@@ -755,8 +807,8 @@
     "name": "Americio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "96": {
@@ -765,8 +817,8 @@
     "name": "Curio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "97": {
@@ -775,8 +827,8 @@
     "name": "Berkelio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "98": {
@@ -785,8 +837,8 @@
     "name": "Californio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "99": {
@@ -795,8 +847,8 @@
     "name": "Einstenio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "100": {
@@ -805,8 +857,8 @@
     "name": "Fermio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "101": {
@@ -815,8 +867,8 @@
     "name": "Mendelevio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "102": {
@@ -825,8 +877,8 @@
     "name": "Nobelio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "103": {
@@ -835,8 +887,8 @@
     "name": "Lawrencio",
     "category": "Actínido",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "104": {
@@ -845,8 +897,8 @@
     "name": "Rutherfordio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "105": {
@@ -855,8 +907,8 @@
     "name": "Dubnio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "106": {
@@ -865,8 +917,8 @@
     "name": "Seaborgio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "107": {
@@ -875,8 +927,8 @@
     "name": "Bohrio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "108": {
@@ -885,8 +937,8 @@
     "name": "Hassio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "109": {
@@ -895,8 +947,8 @@
     "name": "Meitnerio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "110": {
@@ -905,8 +957,8 @@
     "name": "Darmstatio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "111": {
@@ -915,8 +967,8 @@
     "name": "Roentgenio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "112": {
@@ -925,8 +977,8 @@
     "name": "Copernicio",
     "category": "Metal de transición",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "113": {
@@ -935,8 +987,8 @@
     "name": "Nihonio",
     "category": "Metal del bloque p",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "114": {
@@ -945,8 +997,8 @@
     "name": "Flerovio",
     "category": "Metal del bloque p",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "115": {
@@ -955,8 +1007,8 @@
     "name": "Moscovio",
     "category": "Metal del bloque p",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "116": {
@@ -965,8 +1017,8 @@
     "name": "Livermorio",
     "category": "Metal del bloque p",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "117": {
@@ -975,8 +1027,8 @@
     "name": "Teneso",
     "category": "Halógeno",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   },
   "118": {
@@ -985,8 +1037,8 @@
     "name": "Oganesón",
     "category": "Gas noble",
     "hazards": [
-      "Radioactivo",
-      "Tóxico"
+      "Tóxico",
+      "Radioactivo"
     ]
   }
 }

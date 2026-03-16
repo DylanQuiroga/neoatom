@@ -3,6 +3,8 @@ import { useAtomStore, ParticleType } from '../../store/useAtomStore';
 import { getElementData } from '../../utils/elements';
 import { Atom, Play, Pause, List, ChevronUp, ChevronDown, Flame, Radiation, Skull, Droplet, EyeOff, Info } from 'lucide-react';
 import atomsData from '../../data/atoms.json';
+import periodicDataRaw from '../../data/periodic-table-lookup.json';
+import ElementDetailsModal from './ElementDetailsModal';
 
 const ParticleDispenser = ({ type, color, label, count, onAdd, onRemove }: { type: ParticleType, color: string, label: string, count: number, onAdd: () => void, onRemove: () => void }) => {
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
@@ -47,6 +49,7 @@ const OverlayHUD = () => {
   const [isListOpen, setIsListOpen] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(true);
   const [isControlsOpen, setIsControlsOpen] = useState(true);
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
   const element = getElementData(protons);
   const massNumber = protons + neutrons;
@@ -186,10 +189,22 @@ const OverlayHUD = () => {
                   </div>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-semibold mb-1">{element ? element.name : 'Vacio'}</h2>
-                <p className="text-xs sm:text-sm text-white/50 mb-4 sm:mb-6 uppercase tracking-wider font-medium">
-                  {element ? element.category : 'Agrega protones para empezar'}
+                <h2 className="text-xl sm:text-2xl font-semibold mb-1">
+                  {protons === 2 && neutrons === 2 && electrons === 0 ? 'Partícula Alfa' : (element ? element.name : 'Vacio')}
+                </h2>
+                <p className="text-xs sm:text-sm text-white/50 mb-2 uppercase tracking-wider font-medium">
+                  {protons === 2 && neutrons === 2 && electrons === 0 ? 'Radiación Ionizante' : (element ? element.category : 'Agrega protones para empezar')}
                 </p>
+
+                {element && (
+                  <button
+                    onClick={() => setIsDetailsOpen(true)}
+                    className="flex items-center justify-center gap-2 mb-4 sm:mb-6 py-2 px-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 rounded-xl text-blue-300 transition-colors text-xs font-semibold w-full sm:w-auto"
+                  >
+                    <Info className="w-4 h-4 cursor-pointer" />
+                    Ver información detallada
+                  </button>
+                )}
 
                 <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-white/10 pt-4 sm:pt-6">
                   <div className="flex flex-col">
@@ -389,6 +404,13 @@ const OverlayHUD = () => {
         <ParticleDispenser type="neutron" color="bg-gradient-to-br from-blue-500 to-indigo-700" label="Neutrón" count={neutrons} onAdd={() => addParticle('neutron')} onRemove={() => removeParticle('neutron')} />
         <ParticleDispenser type="electron" color="bg-gradient-to-br from-yellow-400 to-amber-600" label="Electrón" count={electrons} onAdd={() => addParticle('electron')} onRemove={() => removeParticle('electron')} />
       </div>
+
+      <ElementDetailsModal 
+        isOpen={isDetailsOpen} 
+        onClose={() => setIsDetailsOpen(false)} 
+        data={periodicDataRaw} 
+        atomicNumber={protons} 
+      />
     </div>
   );
 };
