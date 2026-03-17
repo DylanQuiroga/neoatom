@@ -32,9 +32,6 @@ function App() {
       {/* Pantalla de Carga Global */}
       <LoadingScreen />
 
-      {/* Capa 2D: Interfaz de Usuario y HUD principal */}
-      <OverlayHUD />
-
       {/* Condicional de Vista */}
       {viewMode === '2d' ? (
         <Atom2D />
@@ -59,6 +56,9 @@ function App() {
             </Canvas>
         </div>
       )}
+
+      {/* Capa 2D: Interfaz de Usuario y HUD principal (Al final para estar encima) */}
+      <OverlayHUD />
     </div>
   )
 }

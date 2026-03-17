@@ -43,7 +43,7 @@ export default function Atom2D() {
         width="100%" 
         height="100%" 
         viewBox={`${viewBoxOffset} ${viewBoxOffset} ${viewBoxSize} ${viewBoxSize}`} 
-        className="max-w-3xl"
+        className="overflow-visible"
       >
         {/* Capas y Electrones agrupados por shell para sincronía */}
         {shells.map((shell) => (

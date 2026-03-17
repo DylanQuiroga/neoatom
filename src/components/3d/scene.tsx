@@ -1,85 +1,157 @@
-import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useRef, useMemo, useState, useEffect } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import { useAtomStore, ParticleType } from '../../store/useAtomStore';
 import * as THREE from 'three';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
+import { PerformanceMonitor } from '@react-three/drei';
 
 // Constantes visuales
 const PARTICLE_SIZE = 0.4;
 const NUCLEUS_RADIUS = 0.5;
 
+// Geometrías compartidas para evitar recreación
+const sphereGeom = new THREE.SphereGeometry(PARTICLE_SIZE, 12, 12);
+const electronGeom = new THREE.SphereGeometry(PARTICLE_SIZE * 0.6, 8, 8);
+const tempObject = new THREE.Object3D();
+const tempColor = new THREE.Color();
+
 function Nucleus({ protons, neutrons }: { protons: number, neutrons: number }) {
-  const groupRef = useRef<THREE.Group>(null);
+  const meshRef = useRef<THREE.InstancedMesh>(null);
   const totalParticles = protons + neutrons;
   const isPaused = useAtomStore(state => state.isPaused);
   const speedMultiplier = useAtomStore(state => state.speed);
 
-  // Calculamos posiciones aleatorias agrupadas (Phyllotaxis esférica o Espiral Dorada 3D)
   const particles = useMemo(() => {
     const list = [];
-    const phi = Math.PI * (3 - Math.sqrt(5)); // Golden angle
-
-    // Generar array interpolado de tipos para mezclarlos uniformemente
+    const phi = Math.PI * (3 - Math.sqrt(5));
     const types: ParticleType[] = [];
     for(let i=0; i<protons; i++) types.push('proton');
     for(let i=0; i<neutrons; i++) types.push('neutron');
-    // Fisher-Yates shuffle para mezclar neutrones y protones bien
+    
     for (let i = types.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [types[i], types[j]] = [types[j], types[i]];
     }
 
-    for (let i = 0; i < totalParticles; i++) {
-        const y = 1 - (i / (totalParticles - 1 || 1)) * 2; // y goes from 1 to -1
-        const radius = Math.sqrt(1 - y * y); // radius at y
-        const theta = phi * i;
+    const scale = NUCLEUS_RADIUS * Math.cbrt(totalParticles/2) * 0.8;
 
-        // Scale to our target visual bounds
-        const scale = NUCLEUS_RADIUS * Math.cbrt(totalParticles/2) * 0.8;
+    for (let i = 0; i < totalParticles; i++) {
+        const y = 1 - (i / (totalParticles - 1 || 1)) * 2;
+        const radiusAtY = Math.sqrt(1 - y * y);
+        const theta = phi * i;
         
         list.push({
             type: types[i],
-            position: new THREE.Vector3(
-              Math.cos(theta) * radius * scale,
+            pos: [
+              Math.cos(theta) * radiusAtY * scale,
               y * scale,
-              Math.sin(theta) * radius * scale
-            )
+              Math.sin(theta) * radiusAtY * scale
+            ]
         });
     }
-
     return list;
   }, [protons, neutrons, totalParticles]);
 
+  const rotationXRef = useRef(0);
+  const rotationYRef = useRef(0);
+
   useFrame((_state, delta) => {
-    if (groupRef.current && !isPaused) {
-      groupRef.current.rotation.y += delta * 0.2 * speedMultiplier;
-      groupRef.current.rotation.x += delta * 0.1 * speedMultiplier;
+    if (!meshRef.current) return;
+
+    if (!isPaused) {
+      rotationYRef.current += delta * 0.2 * speedMultiplier;
+      rotationXRef.current += delta * 0.1 * speedMultiplier;
+      meshRef.current.rotation.y = rotationYRef.current;
+      meshRef.current.rotation.x = rotationXRef.current;
     }
+
+    particles.forEach((p, i) => {
+      tempObject.position.set(p.pos[0], p.pos[1], p.pos[2]);
+      tempObject.updateMatrix();
+      meshRef.current!.setMatrixAt(i, tempObject.matrix);
+      
+      const color = p.type === 'proton' ? '#ef4444' : '#3b82f6';
+      tempColor.set(color);
+      meshRef.current!.setColorAt(i, tempColor);
+    });
+    
+    meshRef.current.instanceMatrix.needsUpdate = true;
+    if (meshRef.current.instanceColor) meshRef.current.instanceColor.needsUpdate = true;
   });
 
   return (
-    <group ref={groupRef}>
-      {particles.map((p, i) => (
-        <mesh key={`nuc-${i}`} position={p.position}>
-          {/* Reduced segments from 32x32 to 12x12 for 85% less geometry overhead */}
-          <sphereGeometry args={[PARTICLE_SIZE, 12, 12]} />
-          {/* Swapped from heavy PhysicalMaterial to StandardMaterial */}
-          <meshStandardMaterial 
-            color={p.type === 'proton' ? '#ef4444' : '#3b82f6'} 
-            roughness={0.4}
-            metalness={0.2}
-            emissive={p.type === 'proton' ? '#450a0a' : '#172554'}
-            emissiveIntensity={0.5}
-          />
-        </mesh>
-      ))}
-    </group>
+    <instancedMesh ref={meshRef} args={[sphereGeom, undefined, totalParticles]}>
+      <meshStandardMaterial 
+        roughness={0.4}
+        metalness={0.2}
+        emissive="#111111"
+        emissiveIntensity={0.5}
+      />
+    </instancedMesh>
   );
+}
+
+function ElectronShell({ shellIndex, count }: { shellIndex: number, count: number }) {
+    const groupRef = useRef<THREE.Group>(null);
+    const meshRef = useRef<THREE.InstancedMesh>(null);
+    const radius = 2.5 + shellIndex * 1.5;
+    const baseSpeed = 1.5 / shellIndex; 
+    const isPaused = useAtomStore(state => state.isPaused);
+    const speedMultiplier = useAtomStore(state => state.speed);
+    const flatOrbits = useAtomStore(state => state.flatOrbits);
+
+    useEffect(() => {
+        if (!meshRef.current) return;
+        for(let i=0; i<count; i++) {
+            const angle = (i / count) * Math.PI * 2;
+            tempObject.position.set(Math.cos(angle) * radius, 0, Math.sin(angle) * radius);
+            tempObject.updateMatrix();
+            meshRef.current.setMatrixAt(i, tempObject.matrix);
+        }
+        meshRef.current.instanceMatrix.needsUpdate = true;
+    }, [count, radius]);
+
+    useFrame((state, delta) => {
+        if (!groupRef.current) return;
+
+        if (!isPaused) {
+            // Usamos elapsedTime para una rotación perfectamente suave y constante
+            const time = state.clock.getElapsedTime();
+            groupRef.current.rotation.y = time * baseSpeed * speedMultiplier;
+        }
+
+        // Determinar ángulos objetivo
+        const targetX = flatOrbits ? 0 : shellIndex * Math.PI / 4;
+        const targetZ = flatOrbits ? 0 : shellIndex * Math.PI / 6;
+
+        // Interpolar suavemente hacia los ángulos objetivo (lerp)
+        const lerpFactor = 5 * delta; // Ajusta este valor para más rápido o lento
+        groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, targetX, lerpFactor);
+        groupRef.current.rotation.z = THREE.MathUtils.lerp(groupRef.current.rotation.z, targetZ, lerpFactor);
+    });
+
+    return (
+        <group ref={groupRef}>
+            <mesh rotation={[Math.PI/2, 0, 0]}>
+                {/* Aumentamos segmentos para que se vea circular */}
+                <torusGeometry args={[radius, 0.015, 16, 128]} />
+                <meshBasicMaterial color="#ffffff" transparent opacity={0.1} />
+            </mesh>
+            
+            <instancedMesh ref={meshRef} args={[electronGeom, undefined, count]}>
+                <meshStandardMaterial 
+                    color="#facc15" 
+                    emissive="#facc15"
+                    emissiveIntensity={1.2}
+                    toneMapped={false}
+                />
+            </instancedMesh>
+        </group>
+    );
 }
 
 function Electrons({ count }: { count: number }) {
     const shells = useMemo(() => {
-        // Modelo simplificado (2, 8, 18, 32...)
         let remaining = count;
         const shellConfig = [];
         let n = 1;
@@ -102,72 +174,24 @@ function Electrons({ count }: { count: number }) {
     );
 }
 
-function ElectronShell({ shellIndex, count }: { shellIndex: number, count: number }) {
-    const groupRef = useRef<THREE.Group>(null);
-    const radius = 2.5 + shellIndex * 1.5;
-    const baseSpeed = 1.5 / shellIndex; 
-    const isPaused = useAtomStore(state => state.isPaused);
-    const speedMultiplier = useAtomStore(state => state.speed);
-    const flatOrbits = useAtomStore(state => state.flatOrbits);
-
-    const electrons = useMemo(() => {
-        const list = [];
-        for(let i=0; i<count; i++) {
-            const angle = (i / count) * Math.PI * 2;
-            list.push({ angle });
-        }
-        return list;
-    }, [count]);
-
-    useFrame((_state, delta) => {
-        if (groupRef.current) {
-            if (!isPaused) {
-              // Rotar la capa entera
-              groupRef.current.rotation.y += delta * baseSpeed * speedMultiplier;
-            }
-            if (flatOrbits) {
-              groupRef.current.rotation.x = 0;
-              groupRef.current.rotation.z = 0;
-            } else {
-              // Inclinar un poco cada capa diferente (constante)
-              groupRef.current.rotation.x = shellIndex * Math.PI / 4;
-              groupRef.current.rotation.z = shellIndex * Math.PI / 6;
-            }
-        }
-    });
-
-    return (
-        <group ref={groupRef}>
-            {/* Anillo visual para la órbita */}
-            <mesh rotation={[Math.PI/2, 0, 0]}>
-                {/* Reduced from 16x100 to 4x48 segments */}
-                <torusGeometry args={[radius, 0.02, 4, 48]} />
-                <meshBasicMaterial color="#ffffff" transparent opacity={0.15} />
-            </mesh>
-
-            {/* Los electrones */}
-            {electrons.map((e, i) => (
-                <mesh key={`el-${i}`} position={[Math.cos(e.angle) * radius, 0, Math.sin(e.angle) * radius]}>
-                    {/* Reduced segments from 16x16 to 8x8 */}
-                    <sphereGeometry args={[PARTICLE_SIZE * 0.6, 8, 8]} />
-                    {/* Swapped from heavy PhysicalMaterial to StandardMaterial */}
-                    <meshStandardMaterial 
-                        color="#facc15" 
-                        emissive="#facc15"
-                        emissiveIntensity={2}
-                        toneMapped={false}
-                    />
-                </mesh>
-            ))}
-        </group>
-    );
-}
-
 export default function Scene() {
   const { protons, neutrons, electrons } = useAtomStore();
+  const [highQuality, setHighQuality] = useState(true);
+  const { setDpr } = useThree();
 
   return (
     <>
+      <PerformanceMonitor 
+        onDecline={() => {
+          setHighQuality(false);
+          setDpr(1);
+        }} 
+        onIncline={() => {
+          setHighQuality(true);
+          setDpr(1.5);
+        }}
+      />
+
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 10]} intensity={1} />
       <pointLight position={[-10, -10, -10]} color="#4f46e5" intensity={0.5} />
@@ -177,9 +201,12 @@ export default function Scene() {
         <Electrons count={electrons} />
       </group>
 
-      <EffectComposer>
-        {/* Switched to mipmapBlur for faster mobile bloom instead of fixed height */}
-        <Bloom luminanceThreshold={0.5} luminanceSmoothing={0.9} mipmapBlur intensity={1.5} />
+      <EffectComposer enableNormalPass={false}>
+        {highQuality ? (
+          <Bloom luminanceThreshold={0.5} luminanceSmoothing={0.9} mipmapBlur intensity={1.5} />
+        ) : (
+          <></>
+        )}
       </EffectComposer>
     </>
   );
