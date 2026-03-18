@@ -5,6 +5,7 @@ import { Atom, Play, Pause, List, ChevronUp, ChevronDown, Flame, Radiation, Skul
 import atomsData from '../../data/atoms.json';
 import periodicDataRaw from '../../data/periodic-table-lookup.json';
 import ElementDetailsModal from './ElementDetailsModal';
+import InstructionsModal from './InstructionsModal';
 
 const ParticleDispenser = ({ type, color, label, count, onAdd, onRemove }: { type: ParticleType, color: string, label: string, count: number, onAdd: () => void, onRemove: () => void }) => {
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
@@ -47,9 +48,10 @@ const ParticleDispenser = ({ type, color, label, count, onAdd, onRemove }: { typ
 const OverlayHUD = () => {
   const { protons, neutrons, electrons, addParticle, removeParticle, resetAtom, isPaused, togglePause, speed, setSpeed, viewMode, setViewMode, loadAtom, flatOrbits, toggleFlatOrbits } = useAtomStore();
   const [isListOpen, setIsListOpen] = useState(false);
-  const [isInfoOpen, setIsInfoOpen] = useState(true);
-  const [isControlsOpen, setIsControlsOpen] = useState(true);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isControlsOpen, setIsControlsOpen] = useState(false);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [isInstructionsOpen, setIsInstructionsOpen] = useState(false);
 
   const element = getElementData(protons);
   const massNumber = protons + neutrons;
@@ -251,13 +253,16 @@ const OverlayHUD = () => {
                     </div>
                   </div>
 
-                  <a
-                    href="mailto:djqa.dev@gmail.com"
+                  <button
+                    onClick={() => setIsInstructionsOpen(true)}
                     className="mt-4 flex flex-col items-center justify-center p-2 sm:p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all cursor-pointer group text-center"
                   >
-                    <span className="text-xs sm:text-sm text-white/70 group-hover:text-white transition-colors">¿Encontraste algún error o tienes una sugerencia?</span>
-                    <span className="text-[10px] sm:text-xs text-blue-400/80 group-hover:text-blue-400 mt-1 font-medium tracking-wide">Envía un correo a djqa.dev@gmail.com</span>
-                  </a>
+                    <div className="flex items-center gap-2">
+                      <Info className="w-4 h-4 text-blue-400" />
+                      <span className="text-xs sm:text-sm text-white/70 group-hover:text-white transition-colors">Guía de Uso & Contacto</span>
+                    </div>
+                    <span className="text-[10px] sm:text-xs text-white/30 group-hover:text-blue-400 transition-colors mt-0.5 font-medium tracking-wide">Instrucciones y reporte de errores</span>
+                  </button>
                 </>
               )}
             </div>
@@ -440,6 +445,11 @@ const OverlayHUD = () => {
         onClose={() => setIsDetailsOpen(false)}
         data={periodicDataRaw}
         atomicNumber={protons}
+      />
+
+      <InstructionsModal
+        isOpen={isInstructionsOpen}
+        onClose={() => setIsInstructionsOpen(false)}
       />
     </div>
   );

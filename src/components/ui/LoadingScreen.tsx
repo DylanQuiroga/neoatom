@@ -7,20 +7,50 @@ export default function LoadingScreen() {
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [isMounted, setIsMounted] = useState(true);
 
+  const [minTimePassed, setMinTimePassed] = useState(false);
+  const [fakeProgress, setFakeProgress] = useState(0);
+
   useEffect(() => {
-    // Si la carga de r3f se completa o el porcentaje llega a 100
-    if (!active || progress === 100) {
+    // Simular progreso incluso si no hay assets cargando (para 2D o carga rápida)
+    const interval = setInterval(() => {
+      setFakeProgress(prev => {
+        if (prev < 90) return prev + 1;
+        return prev;
+      });
+    }, 30);
+
+    // Forzar un tiempo mínimo de carga para que el navegador 
+    // estabilice el layout y assets CSS (especialmente en móviles)
+    const timer = setTimeout(() => {
+      setMinTimePassed(true);
+    }, 2500); 
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Solo permitir el fade out si ha pasado el tiempo mínimo Y 
+    // se han cargado los assets 3D (o no hay carga activa)
+    // Y el documento está completamente listo
+    const isReady = document.readyState === 'complete';
+    
+    if (minTimePassed && (!active || progress === 100) && isReady) {
       setIsFadingOut(true);
-      // Dar tiempo para la animación de salida antes de desmontar
       setTimeout(() => setIsMounted(false), 800); 
     }
-  }, [active, progress]);
+  }, [active, progress, minTimePassed]);
 
   if (!isMounted) return null;
 
+  // Usar el mayor valor entre el progreso real y el simulado
+  const displayProgress = Math.max(progress, fakeProgress);
+
   return (
     <div 
-      className={`absolute inset-0 z-50 flex flex-col items-center justify-center bg-[#030712] transition-opacity duration-700 ease-in-out ${isFadingOut ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+      className={`absolute inset-0 z-[999] flex flex-col items-center justify-center bg-[#030712] transition-opacity duration-700 ease-in-out ${isFadingOut ? 'opacity-0 pointer-events-none invisible' : 'opacity-100 visible'}`}
     >
       <div className="flex flex-col items-center gap-6">
         <div className="relative flex items-center justify-center">
@@ -37,11 +67,11 @@ export default function LoadingScreen() {
           <div className="w-48 h-1 bg-white/10 rounded-full overflow-hidden mt-2">
             <div 
               className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 ease-out"
-              style={{ width: `${Math.max(10, progress)}%` }}
+              style={{ width: `${Math.max(10, displayProgress)}%` }}
             />
           </div>
           <span className="text-white/50 text-xs mt-1 font-mono tracking-widest">
-             CARGANDO NÚCLEO... {Math.round(progress)}%
+             CARGANDO NÚCLEO... {Math.round(displayProgress)}%
           </span>
         </div>
       </div>
