@@ -359,7 +359,7 @@ const OverlayHUD = () => {
           </div>
 
           {/* Footer Bar (Bottom Left & Right) */}
-          <div className="flex justify-between items-end w-full pb-4 sm:pb-0">
+          <div className="flex justify-between items-end w-full pb-100 sm:pb-0">
             {/* Atom Presets List (Bottom Left) */}
             <div className="relative pointer-events-auto z-[200]">
               {/* Dropdown Menu */}
