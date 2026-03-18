@@ -17,26 +17,26 @@ const ParticleDispenser = ({ type, color, label, count, onAdd, onRemove }: { typ
     <div
       draggable
       onDragStart={handleDragStart}
-      className={`pointer-events-auto flex flex-col items-center justify-center p-2 sm:p-4 rounded-xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-${color}-500/20 w-[95px] sm:w-[130px] mt-auto`}
+      className={`pointer-events-auto flex flex-col items-center justify-center p-2 sm:p-3 rounded-xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 shadow-lg hover:shadow-${color}-500/20 w-[85px] sm:w-[115px] mt-auto`}
     >
       <div
         onClick={onAdd}
-        className={`w-6 h-6 sm:w-10 sm:h-10 rounded-full mb-2 sm:mb-3 shadow-[0_0_15px_rgba(0,0,0,0.5)] ${color} border border-white/20 cursor-pointer active:scale-95`}
+        className={`w-5 h-5 sm:w-8 sm:h-8 rounded-full mb-2 sm:mb-2 shadow-[0_0_15px_rgba(0,0,0,0.5)] ${color} border border-white/20 cursor-pointer active:scale-95`}
       />
-      <span className="text-white font-medium text-[10px] sm:text-sm tracking-wider uppercase">{label}</span>
+      <span className="text-white font-medium text-[10px] sm:text-xs tracking-wider uppercase">{label}</span>
 
-      <div className="flex items-center justify-between w-full mt-2 bg-black/40 rounded-lg p-1 border border-white/5">
+      <div className="flex items-center justify-between w-full mt-2 bg-black/40 rounded-lg p-0.5 border border-white/5">
         <button
           onClick={onRemove}
           disabled={count <= 0}
-          className={`w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-md font-bold text-lg active:scale-95 transition-colors ${count > 0 ? 'text-white/70 hover:bg-white/10 hover:text-white cursor-pointer' : 'text-white/20 cursor-not-allowed'}`}
+          className={`w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-md font-bold text-base active:scale-95 transition-colors ${count > 0 ? 'text-white/70 hover:bg-white/10 hover:text-white cursor-pointer' : 'text-white/20 cursor-not-allowed'}`}
         >
           -
         </button>
-        <span className="text-white/90 font-mono text-xs sm:text-sm">{count}</span>
+        <span className="text-white/90 font-mono text-[10px] sm:text-xs">{count}</span>
         <button
           onClick={onAdd}
-          className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-md text-white/70 hover:bg-white/10 hover:text-white font-bold text-lg cursor-pointer active:scale-95 transition-colors"
+          className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-md text-white/70 hover:bg-white/10 hover:text-white font-bold text-base cursor-pointer active:scale-95 transition-colors"
         >
           +
         </button>
@@ -434,7 +434,7 @@ const OverlayHUD = () => {
       </div>
 
       {/* Particle Dispensers (Desktop Only - Absolute Bottom Center) */}
-      <div className={`hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 justify-center gap-6 pointer-events-none z-10 w-full max-w-none px-0 transition-opacity duration-300 ${isUiVisible ? 'opacity-100' : 'opacity-0 invisible'}`}>
+      <div className={`hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 justify-center gap-4 pointer-events-none z-10 w-full max-w-none px-0 transition-opacity duration-300 ${isUiVisible ? 'opacity-100' : 'opacity-0 invisible'}`}>
         <ParticleDispenser type="proton" color="bg-gradient-to-br from-red-500 to-rose-700" label="Protón" count={protons} onAdd={() => addParticle('proton')} onRemove={() => removeParticle('proton')} />
         <ParticleDispenser type="neutron" color="bg-gradient-to-br from-blue-500 to-indigo-700" label="Neutrón" count={neutrons} onAdd={() => addParticle('neutron')} onRemove={() => removeParticle('neutron')} />
         <ParticleDispenser type="electron" color="bg-gradient-to-br from-yellow-400 to-amber-600" label="Electrón" count={electrons} onAdd={() => addParticle('electron')} onRemove={() => removeParticle('electron')} />
