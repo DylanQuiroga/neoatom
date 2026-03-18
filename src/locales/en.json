@@ -1,0 +1,97 @@
+{
+  "translation": {
+    "app_name": "NeoAtom",
+    "ui": {
+      "info_button": "Element info",
+      "settings_button": "Settings",
+      "protons": "PROTONS",
+      "neutrons": "NEUTRONS",
+      "electrons": "ELECTRONS",
+      "empty": "Empty",
+      "unknown": "Unknown",
+      "start_hint": "Add protons to start",
+      "unstable_isotopes": "Unstable isotopes",
+      "view_detailed_info": "View detailed info",
+      "guide_contact": "User guide & contact",
+      "instructions_report": "Instructions and bug report",
+      "controls": "Controls",
+      "resume": "Resume",
+      "pause": "Pause",
+      "switch_view": "Switch view",
+      "reset_atom": "Reset atom",
+      "reset": "Reset",
+      "speed": "Speed",
+      "flat_orbits": "Flat orbits",
+      "hide_ui": "Hide UI",
+      "restore_hint": "Double tap or any key to return.",
+      "select_element": "Select element",
+      "atom_list": "Atom list",
+      "elements": "Elements"
+    },
+    "hazards": {
+      "inflamable": "flammable",
+      "corrosivo": "corrosive",
+      "toxico": "toxic",
+      "radiactivo": "radioactive",
+      "danger": "Danger: {{label}}",
+      "inactive": "{{label}} (Inactive)",
+      "element_hazard": "Element {{label}}"
+    },
+    "particles": {
+      "alpha": "Alpha particle",
+      "free_neutron": "Free neutron",
+      "beta": "Beta particle",
+      "proton": "Proton",
+      "deuteron": "Deuteron",
+      "triton": "Triton",
+      "category": {
+        "ionizing": "Ionizing radiation",
+        "neutronic": "Neutronic radiation",
+        "beta": "Beta radiation",
+        "hydrogen": "Hydrogen nucleus",
+        "deuterium": "Deuterium nucleus",
+        "tritium": "Tritium nucleus"
+      },
+      "labels": {
+        "proton": "Proton",
+        "neutron": "Neutron",
+        "electron": "Electron"
+      }
+    },
+    "details": {
+      "atomic_number": "Atomic No.",
+      "period": "Period",
+      "group": "Group",
+      "atomic_mass": "Atomic mass",
+      "density": "Density",
+      "electronegativity": "Electronegativity",
+      "melting_point": "Melting Pt.",
+      "boiling_point": "Boiling Pt.",
+      "phase": "Phase (R.T.)",
+      "electron_config": "Electron configuration",
+      "abbreviated": "Abbreviated",
+      "full": "Full",
+      "discovered_by": "Discovered by",
+      "antiquity": "Antiquity",
+      "appearance": "Appearance",
+      "unknown_appearance": "Unknown",
+      "periodic_table_location": "Periodic table location",
+      "read_more_wiki": "Read more on Wikipedia",
+      "na": "N/A"
+    },
+    "instructions": {
+      "title": "NeoAtom Guide",
+      "build_title": "Build your atom",
+      "build_text": "Use the bottom dispensers to add protons, neutrons, and electrons. Click +/- or drag particles to the nucleus (on PC).",
+      "nav_title": "3D Navigation",
+      "nav_text": "Right-click and drag (or one finger) to rotate the atom. Mouse wheel (or pinch) to zoom. Left click is reserved for UI interactions.",
+      "explore_title": "Explore the universe",
+      "explore_text": "Use the 'Atom List' in the bottom left corner to load presets for real elements and learn about stability and properties.",
+      "focus_title": "Maximum focus",
+      "focus_text": "Hide the entire interface using the 'Hide UI' button to appreciate the atom without distractions. Double tap or press any key to restore it.",
+      "feedback_title": "Found a bug or have a suggestion?",
+      "feedback_text": "You can reach me via the following email:",
+      "copyright": "2026 NEOATOM · ALL RIGHTS RESERVED"
+    }
+  }
+}

@@ -3,9 +3,11 @@ import { useAtomStore, ParticleType } from '../../store/useAtomStore';
 import { getElementData } from '../../utils/elements';
 import { Atom, Play, Pause, List, ChevronUp, ChevronDown, Flame, Radiation, Skull, Droplet, EyeOff, Info } from 'lucide-react';
 import atomsData from '../../data/atoms.json';
-import periodicDataRaw from '../../data/periodic-table-lookup.json';
+import periodicDataRawES from '../../data/periodic-table-lookup-es.json';
+import periodicDataRawEN from '../../data/periodic-table-lookup-en.json';
 import ElementDetailsModal from './ElementDetailsModal';
 import InstructionsModal from './InstructionsModal';
+import { useTranslation } from 'react-i18next';
 
 const ParticleDispenser = ({ type, color, label, count, onAdd, onRemove }: { type: ParticleType, color: string, label: string, count: number, onAdd: () => void, onRemove: () => void }) => {
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
@@ -58,8 +60,25 @@ const OverlayHUD = () => {
   const [isControlsOpen, setIsControlsOpen] = useState(false);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isInstructionsOpen, setIsInstructionsOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
-  const element = getElementData(protons);
+  const periodicDataRaw = i18n.language === 'en' ? periodicDataRawEN : periodicDataRawES;
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'es' ? 'en' : 'es';
+    i18n.changeLanguage(newLang);
+  };
+
+  const baseElement = getElementData(protons);
+  const elementKey = protons > 0 ? (periodicDataRaw.order as string[])[protons - 1] : undefined;
+  const elementFromTable = elementKey ? (periodicDataRaw as any)[elementKey] : null;
+  
+  const element = baseElement ? {
+    ...baseElement,
+    name: elementFromTable?.name || baseElement.name,
+    category: elementFromTable?.category || baseElement.category
+  } : null;
+
   const massNumber = protons + neutrons;
   const netCharge = protons - electrons;
 
@@ -68,10 +87,10 @@ const OverlayHUD = () => {
   const hazards = element?.hazards || [];
 
   const hazardConfig = [
-    { id: 'Inflamable', label: 'inflamable', Icon: Flame, activeClass: 'text-orange-400 bg-orange-500/20 border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.4)]' },
-    { id: 'Corrosivo', label: 'corrosivo', Icon: Droplet, activeClass: 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30 shadow-[0_0_15px_rgba(250,204,21,0.4)]' },
-    { id: 'Tóxico', label: 'tóxico', Icon: Skull, activeClass: 'text-purple-400 bg-purple-500/20 border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)]' },
-    { id: 'Radioactivo', label: 'radiactivo', Icon: Radiation, activeClass: 'text-green-400 bg-green-500/20 border-green-500/30 shadow-[0_0_15px_rgba(74,222,128,0.4)]' }
+    { id: 'Inflamable', label: t('hazards.inflamable'), Icon: Flame, activeClass: 'text-orange-400 bg-orange-500/20 border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.4)]' },
+    { id: 'Corrosivo', label: t('hazards.corrosivo'), Icon: Droplet, activeClass: 'text-yellow-400 bg-yellow-500/20 border-yellow-500/30 shadow-[0_0_15px_rgba(250,204,21,0.4)]' },
+    { id: 'Tóxico', label: t('hazards.toxico'), Icon: Skull, activeClass: 'text-purple-400 bg-purple-500/20 border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.4)]' },
+    { id: 'Radioactivo', label: t('hazards.radiactivo'), Icon: Radiation, activeClass: 'text-green-400 bg-green-500/20 border-green-500/30 shadow-[0_0_15px_rgba(74,222,128,0.4)]' }
   ];
 
   const [isUiVisible, setIsUiVisible] = useState(true);
@@ -134,14 +153,14 @@ const OverlayHUD = () => {
   // We will handle the visibility inside the main return using CSS classes.
 
   const specialParticle = React.useMemo(() => {
-    if (protons === 2 && neutrons === 2 && electrons === 0) return { name: 'Partícula Alfa', category: 'Radiación Ionizante', symbol: 'α' };
-    if (protons === 0 && neutrons === 1 && electrons === 0) return { name: 'Neutrón Libre', category: 'Radiación Neutrónica', symbol: 'n' };
-    if (protons === 0 && neutrons === 0 && electrons === 1) return { name: 'Partícula Beta', category: 'Radiación Beta', symbol: 'β⁻' };
-    if (protons === 1 && neutrons === 0 && electrons === 0) return { name: 'Protón', category: 'Núcleo de Hidrógeno', symbol: 'H⁺' };
-    if (protons === 1 && neutrons === 1 && electrons === 0) return { name: 'Deuterón', category: 'Núcleo de Deuterio', symbol: '²H⁺' };
-    if (protons === 1 && neutrons === 2 && electrons === 0) return { name: 'Tritón', category: 'Núcleo de Tritio', symbol: '³H⁺' };
+    if (protons === 2 && neutrons === 2 && electrons === 0) return { name: t('particles.alpha'), category: t('particles.category.ionizing'), symbol: 'α' };
+    if (protons === 0 && neutrons === 1 && electrons === 0) return { name: t('particles.free_neutron'), category: t('particles.category.neutronic'), symbol: 'n' };
+    if (protons === 0 && neutrons === 0 && electrons === 1) return { name: t('particles.beta'), category: t('particles.category.beta'), symbol: 'β⁻' };
+    if (protons === 1 && neutrons === 0 && electrons === 0) return { name: t('particles.proton'), category: t('particles.category.hydrogen'), symbol: 'H⁺' };
+    if (protons === 1 && neutrons === 1 && electrons === 0) return { name: t('particles.deuteron'), category: t('particles.category.deuterium'), symbol: '²H⁺' };
+    if (protons === 1 && neutrons === 2 && electrons === 0) return { name: t('particles.triton'), category: t('particles.category.tritium'), symbol: '³H⁺' };
     return null;
-  }, [protons, neutrons, electrons]);
+  }, [protons, neutrons, electrons, t]);
 
   return (
     <div className={`absolute inset-0 pointer-events-none z-[100] flex flex-col justify-between p-4 pb-12 sm:pb-8 sm:p-8 font-sans transition-all duration-500`}>
@@ -150,7 +169,7 @@ const OverlayHUD = () => {
         <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-full shadow-2xl animate-fade-in-out flex items-center gap-3 z-50">
           <Info className="w-5 h-5 text-blue-400" />
           <span className="text-sm font-medium tracking-wide">
-            Doble toque o cualquier tecla para volver.
+            {t('ui.restore_hint')}
           </span>
         </div>
       )}
@@ -166,7 +185,7 @@ const OverlayHUD = () => {
               className="flex-1 flex items-center justify-center gap-2 p-2 bg-black/40 backdrop-blur-md border border-white/10 rounded-xl text-white/70 hover:text-white transition-colors"
             >
               <Atom className="w-4 h-4 text-blue-400" />
-              <span className="text-xs font-semibold tracking-wider">Info del elemento</span>
+              <span className="text-xs font-semibold tracking-wider">{t('ui.info_button')}</span>
               {isInfoOpen ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
             </button>
 
@@ -174,7 +193,7 @@ const OverlayHUD = () => {
               onClick={() => setIsControlsOpen(!isControlsOpen)}
               className="flex-1 flex items-center justify-center gap-2 p-2 bg-black/40 backdrop-blur-md border border-white/10 rounded-xl text-white/70 hover:text-white transition-colors"
             >
-              <span className="text-xs font-semibold tracking-wider">Ajustes</span>
+              <span className="text-xs font-semibold tracking-wider">{t('ui.settings_button')}</span>
               {isControlsOpen ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
             </button>
           </div>
@@ -189,7 +208,7 @@ const OverlayHUD = () => {
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Atom className="text-blue-400 w-5 h-5 sm:w-8 sm:h-8 group-hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.5)] transition-all" />
                   <h1 className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-none">
-                    NeoAtom
+                    {t('app_name')}
                   </h1>
                 </div>
                 <div className="hidden sm:block text-white/40 group-hover:text-white transition-colors">
@@ -213,10 +232,10 @@ const OverlayHUD = () => {
                   </div>
 
                   <h2 className="text-xl sm:text-2xl font-semibold mb-1">
-                    {specialParticle ? specialParticle.name : (element ? element.name : (protons === 0 && neutrons === 0 && electrons === 0 ? 'Vacio' : 'Desconocido'))}
+                    {specialParticle ? specialParticle.name : (element ? element.name : (protons === 0 && neutrons === 0 && electrons === 0 ? t('ui.empty') : t('ui.unknown')))}
                   </h2>
                   <p className="text-xs sm:text-sm text-white/50 mb-2 uppercase tracking-wider font-medium">
-                    {specialParticle ? specialParticle.category : (element ? element.category : (protons === 0 && neutrons === 0 && electrons === 0 ? 'Agrega protones para empezar' : 'Isótopos inestables'))}
+                    {specialParticle ? specialParticle.category : (element ? element.category : (protons === 0 && neutrons === 0 && electrons === 0 ? t('ui.start_hint') : t('ui.unstable_isotopes')))}
                   </p>
 
                   {element && (
@@ -225,13 +244,13 @@ const OverlayHUD = () => {
                       className="flex items-center justify-center gap-2 mb-4 sm:mb-6 py-2 px-3 bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/30 rounded-xl text-blue-300 transition-colors text-xs font-semibold w-full sm:w-auto"
                     >
                       <Info className="w-4 h-4 cursor-pointer" />
-                      Ver información detallada
+                      {t('ui.view_detailed_info')}
                     </button>
                   )}
 
                   <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-white/10 pt-4 sm:pt-6">
                     <div className="flex flex-col">
-                      <span className="text-white/50 text-[10px] sm:text-xs tracking-wider mb-1">PROTONES</span>
+                      <span className="text-white/50 text-[10px] sm:text-xs tracking-wider mb-1">{t('ui.protons')}</span>
                       <div className="flex items-center gap-2">
                         <span className="text-lg sm:text-xl font-medium">{protons}</span>
                         {protons > 0 && (
@@ -240,7 +259,7 @@ const OverlayHUD = () => {
                       </div>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-white/50 text-[10px] sm:text-xs tracking-wider mb-1">NEUTRONES</span>
+                      <span className="text-white/50 text-[10px] sm:text-xs tracking-wider mb-1">{t('ui.neutrons')}</span>
                       <div className="flex items-center gap-2">
                         <span className="text-lg sm:text-xl font-medium">{neutrons}</span>
                         {neutrons > 0 && (
@@ -249,7 +268,7 @@ const OverlayHUD = () => {
                       </div>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-white/50 text-[10px] sm:text-xs tracking-wider mb-1">ELECTRONES</span>
+                      <span className="text-white/50 text-[10px] sm:text-xs tracking-wider mb-1">{t('ui.electrons')}</span>
                       <div className="flex items-center gap-2">
                         <span className="text-lg sm:text-xl font-medium">{electrons}</span>
                         {electrons > 0 && (
@@ -265,9 +284,9 @@ const OverlayHUD = () => {
                   >
                     <div className="flex items-center gap-2">
                       <Info className="w-4 h-4 text-blue-400" />
-                      <span className="text-xs sm:text-sm text-white/70 group-hover:text-white transition-colors">Guía de Uso & Contacto</span>
+                      <span className="text-xs sm:text-sm text-white/70 group-hover:text-white transition-colors">{t('ui.guide_contact')}</span>
                     </div>
-                    <span className="text-[10px] sm:text-xs text-white/30 group-hover:text-blue-400 transition-colors mt-0.5 font-medium tracking-wide">Instrucciones y reporte de errores</span>
+                    <span className="text-[10px] sm:text-xs text-white/30 group-hover:text-blue-400 transition-colors mt-0.5 font-medium tracking-wide">{t('ui.instructions_report')}</span>
                   </button>
                 </>
               )}
@@ -282,7 +301,7 @@ const OverlayHUD = () => {
                 className="hidden sm:flex justify-between items-center mb-1 border-b border-white/10 pb-2 cursor-pointer group"
                 onClick={() => setIsControlsOpen(!isControlsOpen)}
               >
-                <span className="text-xs uppercase tracking-widest font-semibold text-white/50 group-hover:text-white/80 transition-colors">Controles</span>
+                <span className="text-xs uppercase tracking-widest font-semibold text-white/50 group-hover:text-white/80 transition-colors">{t('ui.controls')}</span>
                 <div className="text-white/40 group-hover:text-white transition-colors">
                   {isControlsOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                 </div>
@@ -294,7 +313,7 @@ const OverlayHUD = () => {
                     <button
                       onClick={togglePause}
                       className="flex-[0.5] p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white transition-all flex items-center justify-center cursor-pointer active:scale-95"
-                      title={isPaused ? "Reanudar" : "Pausar"}
+                      title={isPaused ? t('ui.resume') : t('ui.pause')}
                     >
                       {isPaused ? <Play className="w-5 h-5 text-green-400" /> : <Pause className="w-5 h-5 text-yellow-400" />}
                     </button>
@@ -302,7 +321,7 @@ const OverlayHUD = () => {
                     <button
                       onClick={() => setViewMode(viewMode === '3d' ? '2d' : '3d')}
                       className="flex-1 p-2 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-white transition-all text-sm font-semibold tracking-wider cursor-pointer active:scale-95"
-                      title="Cambiar Vista Automática"
+                      title={t('ui.switch_view')}
                     >
                       {viewMode === '3d' ? '2D' : '3D'}
                     </button>
@@ -310,15 +329,15 @@ const OverlayHUD = () => {
                     <button
                       onClick={resetAtom}
                       className="flex-1 p-2 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 rounded-xl text-red-400 hover:text-red-300 transition-all text-sm font-medium cursor-pointer active:scale-95"
-                      title="Resetear Átomo"
+                      title={t('ui.reset_atom')}
                     >
-                      Reset
+                      {t('ui.reset')}
                     </button>
                   </div>
 
                   <div className="flex flex-col gap-1">
                     <div className="flex justify-between items-center text-xs text-white/50 mb-1">
-                      <span>Velocidad</span>
+                      <span>{t('ui.speed')}</span>
                       <span className="font-mono text-[10px] bg-white/10 px-1 rounded">{speed.toFixed(1)}x</span>
                     </div>
                     <input
@@ -334,7 +353,7 @@ const OverlayHUD = () => {
 
                   {viewMode === '3d' && (
                     <label className="flex items-center justify-between text-xs text-white/70 cursor-pointer group hover:text-white transition-colors border-t border-white/10 pt-3 mt-1">
-                      <span>Órbitas planas</span>
+                      <span>{t('ui.flat_orbits')}</span>
                       <input
                         type="checkbox"
                         checked={flatOrbits}
@@ -344,6 +363,19 @@ const OverlayHUD = () => {
                     </label>
                   )}
 
+                  <div className="flex items-center justify-between text-xs text-white/70 border-t border-white/10 pt-3 mt-1 group">
+                    <span>Idioma / Language</span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleLanguage();
+                      }}
+                      className="px-2 py-1 bg-white/10 hover:bg-white/20 border border-white/20 rounded-md text-white transition-all text-[10px] font-bold uppercase tracking-widest active:scale-95"
+                    >
+                      {i18n.language === 'es' ? 'EN' : 'ES'}
+                    </button>
+                  </div>
+
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
@@ -352,7 +384,7 @@ const OverlayHUD = () => {
                     className="flex items-center justify-center gap-2 mt-2 p-2 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 rounded-xl text-red-400 transition-all text-xs font-medium cursor-pointer"
                   >
                     <EyeOff className="w-4 h-4" />
-                    <span>Ocultar UI</span>
+                    <span>{t('ui.hide_ui')}</span>
                   </button>
                 </>
               )}
@@ -377,7 +409,7 @@ const OverlayHUD = () => {
               {isListOpen && (
                 <div className="absolute bottom-full left-0 mb-4 w-48 sm:w-64 max-h-[50vh] overflow-y-auto bg-[#0a0a0a]/90 backdrop-blur-2xl border border-white/20 rounded-2xl p-2 flex flex-col gap-1 shadow-[0_0_50px_rgba(0,0,0,0.8)] z-[200]">
                   <div className="text-[10px] text-blue-400 font-bold px-3 pb-2 mb-1 border-b border-white/10 uppercase tracking-[0.2em] sticky top-0 bg-[#0a0a0a]/50 backdrop-blur-md z-[210]">
-                    Seleccionar elemento
+                    {t('ui.select_element')}
                   </div>
                   {atomsData.map((atom) => (
                     <button
@@ -402,8 +434,8 @@ const OverlayHUD = () => {
               >
                 <div className="flex items-center gap-2">
                   <List className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
-                  <span className="font-medium text-xs sm:text-sm hidden sm:inline">Lista de átomos</span>
-                  <span className="font-medium text-xs sm:hidden">Elementos</span>
+                  <span className="font-medium text-xs sm:text-sm hidden sm:inline">{t('ui.atom_list')}</span>
+                  <span className="font-medium text-xs sm:hidden">{t('ui.elements')}</span>
                 </div>
                 {isListOpen ? <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 text-white/50 ml-1" /> : <ChevronUp className="w-3 h-3 sm:w-4 sm:h-4 text-white/50 ml-1" />}
               </button>
@@ -420,13 +452,13 @@ const OverlayHUD = () => {
                     {/* Tooltip superpuesto para móvil */}
                     {isTooltipVisible && isActive && (
                       <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-black/80 text-white text-[10px] sm:text-xs px-2 py-1 rounded whitespace-nowrap z-50 animate-in fade-in duration-200">
-                        Elemento {label}
+                        {t('hazards.element_hazard', { label })}
                       </div>
                     )}
                     <div
                       onClick={() => isActive && setActiveTooltip(isTooltipVisible ? null : id)}
                       className={`flex flex-col items-center justify-center w-10 h-10 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl transition-all duration-500 backdrop-blur-md cursor-pointer ${isActive ? activeClass : 'bg-black/40 text-white/20 border border-white/5 opacity-50 grayscale'}`}
-                      title={isActive ? `Peligro: ${label}` : `${label} (Inactivo)`}
+                      title={isActive ? t('hazards.danger', { label }) : t('hazards.inactive', { label })}
                     >
                       <Icon className="w-4 h-4 sm:w-6 sm:h-6 sm:mb-1" strokeWidth={isActive ? 2.5 : 1.5} />
                       <span className="text-[6px] sm:text-[9px] uppercase font-bold tracking-wider hidden sm:block">{label}</span>

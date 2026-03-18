@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, MousePointer2, Move, Layout, EyeOff, Info, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface InstructionsModalProps {
   isOpen: boolean;
@@ -7,6 +8,8 @@ interface InstructionsModalProps {
 }
 
 const InstructionsModal: React.FC<InstructionsModalProps> = ({ isOpen, onClose }) => {
+  const { t } = useTranslation();
+
   if (!isOpen) return null;
 
   return (
@@ -24,7 +27,7 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isOpen, onClose }
             <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
               <Info className="w-6 h-6 text-blue-400" />
             </div>
-            <h2 className="text-xl font-bold text-white tracking-tight">Guía de NeoAtom</h2>
+            <h2 className="text-xl font-bold text-white tracking-tight">{t('instructions.title')}</h2>
           </div>
           <button
             onClick={onClose}
@@ -39,33 +42,33 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isOpen, onClose }
 
           <InstructionSection
             icon={<MousePointer2 className="w-5 h-5 text-blue-400" />}
-            title="Construye tu átomo"
-            text="Usa los dispensadores de la parte inferior para agregar protones, neutrones y electrones. Puedes hacer clic en los botones + / - o arrastrar las partículas hacia el núcleo (en PC)."
+            title={t('instructions.build_title')}
+            text={t('instructions.build_text')}
           />
 
           <InstructionSection
             icon={<Move className="w-5 h-5 text-purple-400" />}
-            title="Navegación 3D"
-            text="Arrastra con el botón secundario (o un dedo) para rotar el átomo. Usa la rueda del ratón (o pellizca) para hacer zoom. El clic izquierdo está reservado para interactuar con la interfaz."
+            title={t('instructions.nav_title')}
+            text={t('instructions.nav_text')}
           />
 
           <InstructionSection
             icon={<Layout className="text-yellow-400 w-5 h-5" />}
-            title="Explorar el universo"
-            text="Usa la 'Lista de Átomos' en la esquina inferior izquierda para cargar preajustes de elementos reales y aprender sobre su estabilidad y propiedades."
+            title={t('instructions.explore_title')}
+            text={t('instructions.explore_text')}
           />
 
           <InstructionSection
             icon={<EyeOff className="text-red-400 w-5 h-5" />}
-            title="Enfoque total"
-            text="Puedes ocultar la interfaz completa usando el botón 'Ocultar UI' para apreciar el átomo sin distracciones. Haz doble clic o pulsa cualquier tecla para que vuelva."
+            title={t('instructions.focus_title')}
+            text={t('instructions.focus_text')}
           />
 
           <div className="mt-4 p-5 bg-white/5 rounded-2xl border border-white/5 flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <span className="text-sm text-white/80 font-medium">¿Encontraste algún error o tienes una sugerencia?</span>
+              <span className="text-sm text-white/80 font-medium">{t('instructions.feedback_title')}</span>
               <p className="text-xs text-white/50 leading-relaxed">
-                Puedes contactarme a través del siguiente correo electrónico:
+                {t('instructions.feedback_text')}
               </p>
             </div>
 
@@ -80,7 +83,7 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({ isOpen, onClose }
 
           <div className="flex flex-col items-center justify-center py-4 border-t border-white/5">
             <span className="text-[10px] text-white/20 uppercase tracking-[0.3em] font-bold">
-              2026 NEOATOM · TODOS LOS DERECHOS RESERVADOS
+              {t('instructions.copyright')}
             </span>
           </div>
         </div>

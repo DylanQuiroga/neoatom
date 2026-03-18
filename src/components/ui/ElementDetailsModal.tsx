@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, ExternalLink, Activity, Thermometer, Weight, TestTube, Zap, Hash, Columns, Rows } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface ElementDetailsModalProps {
   isOpen: boolean;
@@ -10,13 +11,15 @@ interface ElementDetailsModalProps {
 }
 
 const ElementDetailsModal: React.FC<ElementDetailsModalProps> = ({ isOpen, onClose, data, atomicNumber }) => {
+  const { t } = useTranslation();
+
   if (!isOpen || atomicNumber < 1 || !data.order) return null;
 
   const elementKey = data.order[atomicNumber - 1];
   const element = data[elementKey];
 
   const formatTemp = (k: number | null) => {
-    if (k === null || k === undefined) return 'N/A';
+    if (k === null || k === undefined) return t('details.na');
     const c = k - 273.15;
     const f = (k - 273.15) * 9 / 5 + 32;
     return (
@@ -92,30 +95,30 @@ const ElementDetailsModal: React.FC<ElementDetailsModalProps> = ({ isOpen, onClo
 
           {/* Key Stats Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 flex-shrink-0">
-            <StatCard icon={<Hash className="text-blue-400 w-4 h-4" />} label="Nº Atómico" value={element.number} />
-            <StatCard icon={<Rows className="text-orange-400 w-4 h-4" />} label="Periodo" value={element.period} />
-            <StatCard icon={<Columns className="text-yellow-400 w-4 h-4" />} label="Grupo" value={element.group || 'N/A'} />
-            <StatCard icon={<Weight className="text-purple-400 w-4 h-4" />} label="Masa Atómica" value={`${element.atomic_mass.toFixed(3)} u`} />
-            <StatCard icon={<Activity className="text-green-400 w-4 h-4" />} label="Densidad" value={element.density ? `${element.density} g/cm³` : 'N/A'} />
-            <StatCard icon={<Zap className="text-yellow-400 w-4 h-4" />} label="E. Negatividad" value={element.electronegativity_pauling || 'N/A'} />
-            <StatCard icon={<Thermometer className="text-red-400 w-4 h-4" />} label="Fusión" value={formatTemp(element.melt)} />
-            <StatCard icon={<Thermometer className="text-orange-400 w-4 h-4" />} label="Ebullición" value={formatTemp(element.ebullition || element.boil)} />
-            <StatCard icon={<TestTube className="text-blue-400 w-4 h-4" />} label="Fase (R.T.)" value={element.phase || 'N/A'} />
+            <StatCard icon={<Hash className="text-blue-400 w-4 h-4" />} label={t('details.atomic_number')} value={element.number} />
+            <StatCard icon={<Rows className="text-orange-400 w-4 h-4" />} label={t('details.period')} value={element.period} />
+            <StatCard icon={<Columns className="text-yellow-400 w-4 h-4" />} label={t('details.group')} value={element.group || t('details.na')} />
+            <StatCard icon={<Weight className="text-purple-400 w-4 h-4" />} label={t('details.atomic_mass')} value={`${element.atomic_mass.toFixed(3)} u`} />
+            <StatCard icon={<Activity className="text-green-400 w-4 h-4" />} label={t('details.density')} value={element.density ? `${element.density} g/cm³` : t('details.na')} />
+            <StatCard icon={<Zap className="text-yellow-400 w-4 h-4" />} label={t('details.electronegativity')} value={element.electronegativity_pauling || t('details.na')} />
+            <StatCard icon={<Thermometer className="text-red-400 w-4 h-4" />} label={t('details.melting_point')} value={formatTemp(element.melt)} />
+            <StatCard icon={<Thermometer className="text-orange-400 w-4 h-4" />} label={t('details.boiling_point')} value={formatTemp(element.ebullition || element.boil)} />
+            <StatCard icon={<TestTube className="text-blue-400 w-4 h-4" />} label={t('details.phase')} value={element.phase || t('details.na')} />
           </div>
 
           {/* Details & Config */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-shrink-0">
             <div className="flex flex-col gap-3 p-4 bg-black/20 rounded-xl border border-white/5 sm:col-span-2">
-              <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">Configuración Electrónica</span>
+              <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">{t('details.electron_config')}</span>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <span className="text-[9px] text-blue-400 uppercase tracking-wider block mb-1">Abreviada</span>
+                  <span className="text-[9px] text-blue-400 uppercase tracking-wider block mb-1">{t('details.abbreviated')}</span>
                   <span className="font-mono text-white/90 text-sm bg-white/5 px-2 py-1 rounded border border-white/5 inline-block">
                     {element.electron_configuration_semantic}
                   </span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-blue-400 uppercase tracking-wider block mb-1">Completa</span>
+                  <span className="text-[9px] text-blue-400 uppercase tracking-wider block mb-1">{t('details.full')}</span>
                   <span className="font-mono text-white/70 text-xs bg-white/5 px-2 py-1 rounded border border-white/5 inline-block whitespace-pre-wrap">
                     {element.electron_configuration}
                   </span>
@@ -124,21 +127,21 @@ const ElementDetailsModal: React.FC<ElementDetailsModalProps> = ({ isOpen, onClo
             </div>
 
             <div className="flex flex-col gap-1 p-4 bg-black/20 rounded-xl border border-white/5">
-              <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">Descubierto por</span>
-              <span className="text-white/90 text-sm font-medium">{element.discovered_by || 'Antigüedad'}</span>
+              <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">{t('details.discovered_by')}</span>
+              <span className="text-white/90 text-sm font-medium">{element.discovered_by || t('details.antiquity')}</span>
             </div>
 
             <div className="flex flex-col gap-1 p-4 bg-black/20 rounded-xl border border-white/5">
-              <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">Apariencia</span>
+              <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-1">{t('details.appearance')}</span>
               <span className="text-white/90 text-sm capitalize">
-                {element.appearance || 'Desconocida'}
+                {element.appearance || t('details.unknown_appearance')}
               </span>
             </div>
           </div>
 
           {/* Mini Periodic Table Position indicator */}
           <div className="flex flex-col gap-1 p-4 bg-black/20 rounded-xl border border-white/5 flex-shrink-0">
-            <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-3 text-center">Ubicación en la Tabla Periódica</span>
+            <span className="text-[10px] text-white/40 uppercase tracking-widest font-semibold mb-3 text-center">{t('details.periodic_table_location')}</span>
             <div className="flex justify-center w-full px-2 sm:px-10 pb-2">
               <div
                 className="grid gap-[2px] sm:gap-[3px] w-full"
@@ -177,7 +180,7 @@ const ElementDetailsModal: React.FC<ElementDetailsModalProps> = ({ isOpen, onClo
               rel="noopener noreferrer"
               className="mt-2 flex items-center justify-center gap-2 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-colors text-white/60 hover:text-white text-sm font-medium flex-shrink-0"
             >
-              <span>Leer más en Wikipedia</span>
+              <span className="mt-1">{t('details.read_more_wiki')}</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           )}
