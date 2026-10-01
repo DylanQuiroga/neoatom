@@ -18,7 +18,7 @@ NeoAtom es una aplicación web interactiva desarrollada en React y Three.js que 
 *   **Alertas de peligrosidad (Hazards):** Una vez formado un elemento representativo, el sistema muestra visualmente alertas GHS (Inflamable, Corrosivo, Tóxico y Radiactivo) si aplica, reaccionando al estado actual.
 *   **Control total del motor:** A través del panel de ajustes, el usuario puede pausar las simulaciones, acelerar y ralentizar la velocidad orbital, y forzar la alineación en "órbitas planas" para una previsualización de Bohr estática en 3D.
 
-## tecnologías y librerías utilizadas
+## Tecnologías y librerías utilizadas
 
 *   **Core / Marco:** React 18, TypeScript, y Vite.
 *   **Renderizado de gráficos 3D:**
